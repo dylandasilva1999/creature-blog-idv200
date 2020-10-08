@@ -7,8 +7,11 @@
     use Symfony\Component\Routing\Annotation\Route;
 
     class HomeController extends AbstractController {
-        public function helloWorld() {
 
+        /**
+         * @Route("/home", name="home_view")
+         */
+        public function home() {
             return new Response(
             '<html><body><h1>Hello World</h1></body></html>'
             );

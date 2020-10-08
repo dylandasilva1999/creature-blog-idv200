@@ -7,8 +7,10 @@
     use Symfony\Component\Routing\Annotation\Route;
 
     class ProfileController extends AbstractController {
-        
-        /*@Route("/profile/{id}", name="profile_view")*/
+
+        /**
+         * @Route("/profile/{id}", name="profile_view")
+         */
         public function viewProfile($id = "1") {
 
             $userId = (int) $id;
@@ -28,7 +30,6 @@
                     $model['user'] = $user;
                 }
             }
-
             return $this->render($view, $model);
         }
     }

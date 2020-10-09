@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+        {% block title %}CRE | Login{% endblock %}
+
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+        {% endblock %}
+
+        {% block body %}
+            {% block main %}
+
+            <div class="body container-fluid">
+                <div class="container div" id="container">
+                    <div class="form-container sign-up-container">
+                        <form action="#">
+                            <h1>Create Account</h1>
+                            <div class="social-container">
+                                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                            </div>
+                            <span>OR</span>
+                            <input type="text"  placeholder="Full Name"/>
+                            <input type="email"  placeholder="Email Address"/>
+                            <input type="password"  placeholder="Password"/>
+                            <input type="confirmpassword" placeholder="Confirm Password"/>
+                            <input type="file" id="myFile" name="filename">
+                            <input type="radio" id="user" name="user" value="user">
+
+                            <p id="signIn">Already have an account? <b>Sign In here</b></p>
+                        </form>
+                    </div>
+                    <div class="form-container sign-in-container">
+                        <form action="#">
+                            <h1>Sign in</h1>
+                            <div class="social-container">
+                                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                            </div>
+                            <span>OR</span>
+                            <input type="email"  placeholder="Email Address"/>
+                            <input type="password" placeholder="Password"/>
+                            <button class="cancel-btn">CANCEL</button>
+                            <button class="register-btn" id="signUp">REGISTER</button>
+
+                            <p id="info-text">Don't have an account? <b>Sign Up!</b></p>
+                        </form>
+                        </form>
+                    </div>
+                    <div class="overlay-container">
+                        <div class="overlay">
+                            <div class="overlay-panel overlay-left">
+                                <h1>Become part of the pack, today.</h1>
+                                <p>Become a wildlife enthusiast with us, join in on the fun blogs and exciting news about the wildlife</p>
+                            
+                            </div>
+                            <div class="overlay-panel overlay-right">
+                                <h1>Welcome back to the wild.</h1>
+                                <p>Login and tell us about your journey in the wildlife!</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </body>
+
+        {% endblock main %}
+    {% endblock body %}

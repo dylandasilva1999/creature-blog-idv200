@@ -634,7 +634,7 @@ button.card-btn:hover {
 }
 
 .blog-icon {
-  background-image: url("../../img/icons/blogging.svg");
+  background-image: url("../../img/blogging.svg");
   background-repeat: no-repeat;
   background-size: contain;
   width: 55%;
@@ -731,7 +731,7 @@ FOOTER
 .logo-footer {
   width: 120px;
   height: 120px;
-  background-image: url("../../img/icons/colour-logo.svg");
+  background-image: url("../../img/colour-logo.svg");
   background-repeat: no-repeat;
 }
 

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <!-- META DATA -->
+        <meta charset="UTF-8">
+        <meta name="description" content="Creature is a South African Blogging Website for those interested in Wildlife!">
+        <meta name="keywords" content="Creature Blog, Wildlife, Nature, Blogging, South African Wildlife, Writing, Ideas, Thinking, Website">
+        <meta name="author" content="Dylan da Silva, Dylan Vanhout, Pfano Khampha">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">       
+        
+        <!-- WEBSITE TITLE -->
+        <title>{% block title %}CRE | Blogs{% endblock %}</title>
+        <link rel="icon" href="{{ asset('img/colour-logo.ico') }}">
+        
+        <!-- JQUERY -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        
+        <!-- FONTS -->
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+        
+        {% block stylesheets %}
+
+        <!-- BOOTSTRAP AND PAPER KIT-->
+        <link rel="stylesheet" href="{{ asset('css/paper-kit.css') }}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">   
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+        <link rel="stylesheet" href="{{ asset('css/blogs.css') }}">
+
+        {% endblock %}
+
+    </head> <!-- End of Head -->
+
+    <body>
+
+        <header>
+
+            <div class="container-fluid">
+
+                <div class="header-image" id="parallax">
+
+                    <nav class="stroke">
+                        <div class="logo">
+                            <img src="{{ asset('img/colour-logo.svg') }}">
+                            <h4 id="logo-text">CREATURE</h4>
+                        </div> <!-- Logo Container -->
+                        <ul class="nav-links">
+                            <li>
+                                <i class="fas fa-home"></i>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                <a href="#">News</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-camera" aria-hidden="true"></i>
+                                <a href="#">Photo Gallery</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-comment" aria-hidden="true"></i>
+                                <a href="../pages/blogs.html">Blog</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-question-circle"></i>
+                                <a href="#">About Us</a>
+                            </li>
+                        </ul> <!-- Nav Links List -->
+                        <div class="divider"></div>
+                        <div class="profile-container">
+                            <h4 id="user-name">Greg Stander</h4>
+                            <div class="profile-img">
+                                <img src="{{ asset('img/default-avatar-profile-icon-grey-photo-placeholder-vector-17317730.jpg') }}">
+                            </div> <!-- Profile Image Container -->
+                        </div> <!-- Profile Container -->
+                        <div class="burger">
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                            <div class="line3"></div>
+                        </div>
+                    </nav> <!-- End of Navigation -->
+
+                    <div class="social-media-icons-header d-none d-xl-block">
+
+                        <a href="https://www.instagram.com/"><img src="{{ asset('img/instagram.svg') }}"></a>
+                        <a href="https://www.facebook.com/"><img src="{{ asset('img/facebook.svg') }}"></a>
+                        <a href="https://twitter.com/"><img src="{{ asset('img/twitter.svg') }}"></a>
+        
+                    </div> <!-- Social Media Icons Div-->
+
+                    <div class="header-content col-xl-6 col-10">
+
+                        <div class="welcome-blog-text col-xl-6">
+                            <h4 id="welcome-text">Welcome to the</h4>
+                            <div class="underline col-xl-6 col-8 col-sm-5"></div>
+                        </div> <!-- Welcome Blog Container -->
+    
+                        <div class="creature-blog-heading">
+                            <h1 id="creature-heading">Creature Blog</h1>
+                        </div> <!-- Creature Blog Heading Container -->
+    
+                        <div class="intro-paragraph-header col-xl-8">
+                            <p id="intro-paragraph">
+                                This blog is dedicated to the people who are interested in the wildlife, and have the need to easily and 
+                                effectively blog their ideas! As the process is seamless, and catered for those wild life enthusiasts.
+                            </p>
+                        </div> <!-- Intro Paragraph Header -->
+
+                        <a href="#search"><button class="write-blog-btn">Search blog</button></a>
+
+                    </div> <!-- Header Content -->
+
+                    <div class="scroll-down-icon bounce">
+                        <a href="#cards"><img src="{{ asset('img/down-icon.svg') }}"></a>
+                    </div> <!-- Scroll down icon -->
+
+                    <div class="colour-overlay"></div>
+
+                </div> <!-- Header Image Container -->
+            </div> <!-- Container Fluid Header -->
+
+        </header> <!-- End of Header -->
+
+        <main>
+
+            <div class="container col-xl-10 content" id="content">
+
+                <!-- Cards Section Container -->
+                <div class="info-cards col-xl-12" id="cards">
+                    <div class="card news" style="width: 20rem;">
+                        <div class="card-body">
+                            <div class="icon-news"></div>
+                            <a href="#"><button class="card-btn">news</button></a>
+                        </div>
+                    </div> <!-- News Card -->
+                    <div class="card trending" style="width: 20rem;">
+                        <div class="card-body">
+                            <div class="icon-trending"></div>
+                            <a href="#"><button class="card-btn">trending</button></a>
+                        </div>
+                    </div> <!-- Trending Card -->
+                    <div class="card most-liked" style="width: 20rem;">
+                        <div class="card-body">
+                            <div class="icon-most-liked"></div>
+                            <a href="#"><button class="card-btn">most liked</button></a>
+                        </div>
+                    </div> <!-- Most Liked Card -->
+                    <div class="card national" style="width: 20rem;">
+                        <div class="card-body">
+                            <div class="icon-national"></div>
+                            <a href="#"><button class="card-btn">national</button></a>
+                        </div>
+                    </div> <!-- National Card -->
+                </div> <!-- Info Cards Section -->
+
+                <!-- Search and Filter Section Container -->
+                <div class="search-filter col-xl-12">
+                    <div class="row filer-container">
+                        <div class="year col-xl-2">
+                            <select name="year-dropdown" id="year-dropdown">
+                                <option value="Year" disabled selected>Year</option>
+                                <option value="2015">2015</option>
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2018">2018</option>
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                            </select>
+                        </div> <!-- Year Dropdown -->
+                        <div class="title col-xl-2">
+                            <select name="title-dropdown" id="title-dropdown">
+                                <option value="Title" disabled selected>Title</option>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                            </select>
+                        </div> <!-- Title Dropdown -->
+                        <div class="category col-xl-2">
+                            <select name="category-dropdown" id="category-dropdown">
+                                <option value="Category" disabled selected>Category</option>
+                                <option value="Big 5">Big 5</option>
+                                <option value="Endangered">Endangered</option>
+                                <option value="Spotted">Spotted</option>
+                                <option value="Life in the Kruger">Life in the Kruger</option>
+                            </select>
+                        </div> <!-- Category Dropdown -->
+                        <div class="search col-xl-4">
+                            <form method="post">
+                                <input type="text" placeholder="Search Blog" name="search" class="search-bar" id="search">
+                                <button type="submit" class="search"><img src="{{ asset('img/search.svg') }}" class="search-icon" ></button>
+                            </form>
+                        </div> <!-- Search Bar Field -->
+                        <div class="show-all-btn col-xl-2">
+                            <input type="submit" class="showAll" name="showall" value="Show All">
+                        </div> <!-- Show all Button -->
+                    </div>
+                </div> <!-- Search Filter -->
+
+                <!-- Blog Posts Section Cards -->
+                <div class="blog-posts col-xl-12">
+                    <div class="row blogs">
+                        <div class="card blog-post" style="width: 22rem;">
+                            <div class="top-section">
+                                <img src="{{ asset('img/pexels-flickr-146037.jpg') }}">
+                                <div class="blog-icon-container">
+                                    <div class="blog-icon"></div>
+                                </div> <!-- Blog Icon Container -->
+                            </div> <!-- Left Section -->
+                            <div class="bottom-section">
+                                <p id="author">Dylan Vanhout</p>
+                                <p id="blog-date">2020</p>
+                                <h3 id="blog-title">Why are African Wild Dogs so Endangered?</h3>
+                                <a href="../pages/individual-blog.html"><button class="read-more-btn">Read More</button></a>
+                            </div> <!-- Right Section -->
+                        </div> <!-- Blog Post -->
+                        <div class="card blog-post" style="width: 22rem;">
+                            <div class="top-section">
+                                <img src="{{ asset('img/geran-de-klerk-f0oe9P9Yixs-unsplash.jpg') }}">
+                                <div class="blog-icon-container">
+                                    <div class="blog-icon"></div>
+                                </div> <!-- Blog Icon Container -->
+                            </div> <!-- Left Section -->
+                            <div class="bottom-section">
+                                <p id="author">Dylan Vanhout</p>
+                                <p id="blog-date">2020</p>
+                                <h3 id="blog-title">Why are African Wild Dogs so Endangered?</h3>
+                                <a href="../pages/individual-blog.html"><button class="read-more-btn">Read More</button></a>
+                            </div> <!-- Right Section -->
+                        </div> <!-- Blog Post -->
+                        <div class="card blog-post" style="width: 22rem;">
+                            <div class="top-section">
+                                <img src="{{ asset('img/geran-de-klerk-f0oe9P9Yixs-unsplash.jpg') }}">
+                                <div class="blog-icon-container">
+                                    <div class="blog-icon"></div>
+                                </div> <!-- Blog Icon Container -->
+                            </div> <!-- Left Section -->
+                            <div class="bottom-section">
+                                <p id="author">Dylan Vanhout</p>
+                                <p id="blog-date">2020</p>
+                                <h3 id="blog-title">Why are African Wild Dogs so Endangered?</h3>
+                                <a href="../pages/individual-blog.html"><button class="read-more-btn">Read More</button></a>
+                            </div> <!-- Right Section -->
+                        </div> <!-- Blog Post -->
+                        <div class="card blog-post" style="width: 22rem;">
+                            <div class="top-section">
+                                <img src="{{ asset('img/geran-de-klerk-f0oe9P9Yixs-unsplash.jpg') }}">
+                                <div class="blog-icon-container">
+                                    <div class="blog-icon"></div>
+                                </div> <!-- Blog Icon Container -->
+                            </div> <!-- Left Section -->
+                            <div class="bottom-section">
+                                <p id="author">Dylan Vanhout</p>
+                                <p id="blog-date">2020</p>
+                                <h3 id="blog-title">Why are African Wild Dogs so Endangered?</h3>
+                                <a href="../pages/individual-blog.html"><button class="read-more-btn">Read More</button></a>
+                            </div> <!-- Right Section -->
+                        </div> <!-- Blog Post -->
+                        <div class="card blog-post" style="width: 22rem;">
+                            <div class="top-section">
+                                <img src="{{ asset('img/geran-de-klerk-f0oe9P9Yixs-unsplash.jpg') }}">
+                                <div class="blog-icon-container">
+                                    <div class="blog-icon"></div>
+                                </div> <!-- Blog Icon Container -->
+                            </div> <!-- Left Section -->
+                            <div class="bottom-section">
+                                <p id="author">Dylan Vanhout</p>
+                                <p id="blog-date">2020</p>
+                                <h3 id="blog-title">Why are African Wild Dogs so Endangered?</h3>
+                                <a href="../pages/individual-blog.html"><button class="read-more-btn">Read More</button></a>
+                            </div> <!-- Right Section -->
+                        </div> <!-- Blog Post -->
+                        <div class="card blog-post" style="width: 22rem;">
+                            <div class="top-section">
+                                <img src="{{ asset('img/geran-de-klerk-f0oe9P9Yixs-unsplash.jpg') }}">
+                                <div class="blog-icon-container">
+                                    <div class="blog-icon"></div>
+                                </div> <!-- Blog Icon Container -->
+                            </div> <!-- Left Section -->
+                            <div class="bottom-section">
+                                <p id="author">Dylan Vanhout</p>
+                                <p id="blog-date">2020</p>
+                                <h3 id="blog-title">Why are African Wild Dogs so Endangered?</h3>
+                                <a href="../pages/individual-blog.html"><button class="read-more-btn">Read More</button></a>
+                            </div> <!-- Right Section -->
+                        </div> <!-- Blog Post -->
+                        <div class="card blog-post" style="width: 22rem;">
+                            <div class="top-section">
+                                <img src="{{ asset('img/geran-de-klerk-f0oe9P9Yixs-unsplash.jpg') }}">
+                                <div class="blog-icon-container">
+                                    <div class="blog-icon"></div>
+                                </div> <!-- Blog Icon Container -->
+                            </div> <!-- Left Section -->
+                            <div class="bottom-section">
+                                <p id="author">Dylan Vanhout</p>
+                                <p id="blog-date">2020</p>
+                                <h3 id="blog-title">Why are African Wild Dogs so Endangered?</h3>
+                                <a href="../pages/individual-blog.html"><button class="read-more-btn">Read More</button></a>
+                            </div> <!-- Right Section -->
+                        </div> <!-- Blog Post -->
+                        <div class="card blog-post" style="width: 22rem;">
+                            <div class="top-section">
+                                <img src="{{ asset('img/geran-de-klerk-f0oe9P9Yixs-unsplash.jpg') }}">
+                                <div class="blog-icon-container">
+                                    <div class="blog-icon"></div>
+                                </div> <!-- Blog Icon Container -->
+                            </div> <!-- Left Section -->
+                            <div class="bottom-section">
+                                <p id="author">Dylan Vanhout</p>
+                                <p id="blog-date">2020</p>
+                                <h3 id="blog-title">Why are African Wild Dogs so Endangered?</h3>
+                                <a href="../pages/individual-blog.html"><button class="read-more-btn">Read More</button></a>
+                            </div> <!-- Right Section -->
+                        </div> <!-- Blog Post -->
+                        <div class="card blog-post" style="width: 22rem;">
+                            <div class="top-section">
+                                <img src="{{ asset('img/geran-de-klerk-f0oe9P9Yixs-unsplash.jpg') }}">
+                                <div class="blog-icon-container">
+                                    <div class="blog-icon"></div>
+                                </div> <!-- Blog Icon Container -->
+                            </div> <!-- Left Section -->
+                            <div class="bottom-section">
+                                <p id="author">Dylan Vanhout</p>
+                                <p id="blog-date">2020</p>
+                                <h3 id="blog-title">Why are African Wild Dogs so Endangered?</h3>
+                                <a href="../pages/individual-blog.html"><button class="read-more-btn">Read More</button></a>
+                            </div> <!-- Right Section -->
+                        </div> <!-- Blog Post -->
+                        <div class="card blog-post" style="width: 22rem;">
+                            <div class="top-section">
+                                <img src="{{ asset('img/geran-de-klerk-f0oe9P9Yixs-unsplash.jpg') }}">
+                                <div class="blog-icon-container">
+                                    <div class="blog-icon"></div>
+                                </div> <!-- Blog Icon Container -->
+                            </div> <!-- Left Section -->
+                            <div class="bottom-section">
+                                <p id="author">Dylan Vanhout</p>
+                                <p id="blog-date">2020</p>
+                                <h3 id="blog-title">Why are African Wild Dogs so Endangered?</h3>
+                                <a href="../pages/individual-blog.html"><button class="read-more-btn">Read More</button></a>
+                            </div> <!-- Right Section -->
+                        </div> <!-- Blog Post -->
+                    </div>
+                </div> <!-- Blog Posts Section -->
+
+                <!-- Footer Start -->
+                <footer>
+
+                    <div class="footer col-xl-12">
+                        <div class="row">
+                            <div class="logo-footer"></div>
+                            <div class="social-media-icons-footer d-none d-xl-block">
+                                <a href="https://www.instagram.com/"><img src="{{ asset('img/instagram.svg') }}"></a>
+                                <a href="https://www.facebook.com/"><img src="{{ asset('img/facebook.svg') }}"></a>
+                                <a href="https://twitter.com/"><img src="{{ asset('img/twitter.svg') }}"></a>
+                            </div> <!-- Social Media Icons Div-->
+                            <div class="footer-links">
+                                <ul class="footer-links-ul">
+                                    <li>
+                                        <a href="#">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">News</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Photo Gallery</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Blog</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">About Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div> <!-- Footer Row -->
+                    </div> <!-- Footer Div -->
+                    
+                </footer>
+                <!-- Footer End -->
+
+            </div> <!-- Content Section -->
+
+        </main> <!-- Main Section -->
+        
+    </body> <!-- End of Body -->
+
+    {% block javascripts %}
+
+    <!-- JAVASCRIPT -->
+    <script src="{{ asset('js/pages/blogs.js') }}"></script>
+        
+    <!-- JQUERY CDN - SLIM VERSION (WITHOUT AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <!-- POPPER.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <!-- PAPER KIT 2.0 -->
+    <script src="{{ asset('js/bootstrap & paperkit/paper-kit.min.js') }}" type="text/javascript"></script>
+
+    {% endblock javascripts %}
+
+</html> <!-- End of HTML -->

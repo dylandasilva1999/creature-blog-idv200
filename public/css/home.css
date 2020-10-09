@@ -1,0 +1,123 @@
+/*
+
+Colours:
+
+LightGreen: #5D6B34, 5 73 114
+DarkGreen: #404724, 167 218 199
+Yellow/Gold: #CBAD4C, 
+LightBlue: #376994, 229 229 229
+
+*/
+
+/*
+
+BODY COPY FONTS
+________________________________
+
+font-family: 'Lato', sans-serif;
+
+*/
+
+/*
+
+STYLISED FONTS
+________________________________
+
+font-family: 'Caveat Brush', cursive;
+
+*/
+
+
+/*
+**********************************************************************
+AUTHOR CARD **********************************************************
+**********************************************************************
+*/
+
+.author-card {
+  width: 300px;
+  height: 450px;
+  display: inline-block;
+  text-align: center;
+  margin-top: 10%;
+  margin-left: 5%;
+  background-color: #fafafa;
+  border-radius: 15px;
+  box-shadow: 0 2px 3px rgb(86, 86, 86);
+  transition-duration: 0.3s;
+}
+
+.author-card-profile-img {
+  width: 130px;
+  height: 130px;
+  border: 3px solid #eee;
+  border-radius: 50%;
+  margin: 20px auto;
+  background-color: lightgray;
+  background-image: url();
+  background-size: cover;
+  transition-duration: 0.3s;
+}
+
+.author-card-profile-img:hover {
+  opacity: 0.5;
+}
+
+.author-card-content {
+  text-align: center;
+}
+
+.author-card-content p {
+  padding-top: 10px;
+}
+
+.author-card-description {
+  font-size: 0.8rem;
+  margin: 0 20px;
+}
+
+.author-card-button {
+  margin: 25px auto;
+  display: block;
+  width: 150px;
+  padding: 4px;
+  background-color: #5D6B34;
+  border-radius: 30px;
+  border: 2px solid white;
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.8rem;
+  transition-duration: 0.3s;
+}
+
+.author-card-button:hover {
+  background-color: transparent;
+  border: 1px solid  #5D6B34;
+  color: black;
+}
+
+/*
+**********************************************************************
+AUTHOR CARD END ******************************************************
+**********************************************************************
+*/
+
+/*
+**********************************************************************
+EDITORS SECTION ******************************************************
+**********************************************************************
+*/
+
+
+
+/*
+**********************************************************************
+EDITORS SECTION END **************************************************
+**********************************************************************
+*/
+
+
+
+
+
+

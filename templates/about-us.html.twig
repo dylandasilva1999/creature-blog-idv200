@@ -1,0 +1,104 @@
+{% extends 'base.html.twig' %}
+
+        {% block title %}CRE | About Us{% endblock %}
+
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('css/about-us.css') }}">
+        {% endblock %}
+
+        {% block main %}
+
+            <header>
+
+                <div class="container-fluid">
+                    <div class="header-image" id="parallax">
+                        <nav class="stroke">
+                            <div class="logo">
+                                <img src="{{ asset('img/colour-logo.svg') }}">
+                                <h4 id="logo-text">CREATURE</h4>
+                            </div> <!-- Logo Container -->
+                            <ul class="nav-links">
+                                <li>
+                                    <i class="fas fa-home"></i>
+                                    <a href="{{ path('home_view') }}">Home</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-camera" aria-hidden="true"></i>
+                                    <a href="#">Photo Gallery</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-comment" aria-hidden="true"></i>
+                                    <a href="{{ path('blogs_view') }}">Blog</a>
+                                </li>
+                                <li>
+                                    <i class="fas fa-question-circle"></i>
+                                    <a href="{{ path('about_view') }}">About Us</a>
+                                </li>
+                            </ul> <!-- Nav Links List -->
+                            <div class="divider"></div>
+                            <div class="profile-container">
+                                <h4 id="user-name">Greg Stander</h4>
+                                <div class="profile-img">
+                                    <img src="{{ asset('img/default-avatar-profile-icon-grey-photo-placeholder-vector-17317730.jpg') }}">
+                                </div> <!-- Profile Image Container -->
+                            </div> <!-- Profile Container -->
+                            <div class="burger">
+                                <div class="line1"></div>
+                                <div class="line2"></div>
+                                <div class="line3"></div>
+                            </div>
+                        </nav> <!-- End of Navigation -->
+
+                        <div class="social-media-icons-header d-none d-xl-block">
+
+                            <a href="https://www.instagram.com/"><img src="{{ asset('img/instagram.svg') }}"></a>
+                            <a href="https://www.facebook.com/"><img src="{{ asset('img/facebook.svg') }}"></a>
+                            <a href="https://twitter.com/"><img src="{{ asset('img/twitter.svg') }}"></a>
+            
+                        </div> <!-- Social Media Icons Div-->
+
+                        <div class="header-content col-xl-6 col-10">
+
+                            <div class="welcome-blog-text col-xl-6">
+                                <h4 id="welcome-text">Let's talk</h4>
+                                <div class="underline col-xl-4 col-8 col-sm-5"></div>
+                            </div> <!-- Welcome Blog Container -->
+        
+                            <div class="creature-blog-heading">
+                                <h1 id="creature-heading">About Us</h1>
+                            </div> <!-- Creature Blog Heading Container -->
+        
+                            <div class="intro-paragraph-header col-xl-8">
+                                <p id="intro-paragraph">
+                                    A little story about Creature, is that it started out as a small business in the Kruger National Park!
+                                    Then evolved into this blog site, where anybody post their wildlife experiences.
+                                </p>
+                            </div> <!-- Intro Paragraph Header -->
+
+                        </div> <!-- Header Content -->
+
+                        <div class="scroll-down-icon bounce">
+                            <a href="#cards"><img src="{{ asset('img/down-icon.svg') }}"></a>
+                        </div> <!-- Scroll down icon -->
+
+                        <div class="colour-overlay"></div>
+
+                    </div> <!-- Header Image Container -->
+                </div> <!-- Container Fluid Header -->
+
+            </header> <!-- End of Header -->
+
+            <div class="container col-xl-10 content" id="content">
+
+                <div class="background-story col-xl-10">
+                    <h4 id="story-text">Background Story</h4>
+                    <div class="col-xl-12 line"></div>
+                </div> <!-- Background Story -->
+
+            </div> <!-- Content Section -->
+
+        {% endblock main %}
+
+        {% block javascripts %}
+            <script src="{{ asset('js/about-us.js') }}"></script>
+        {% endblock javascripts %}

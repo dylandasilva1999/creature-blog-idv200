@@ -6,8 +6,7 @@
             <link rel="stylesheet" href="{{ asset('css/main.css') }}">
         {% endblock %}
 
-        {% block body %}
-            {% block main %}
+        {% block main %}
 
             <div class="body container-fluid">
                 <div class="container div" id="container">
@@ -65,5 +64,6 @@
 
         </body>
 
-        {% endblock main %}
-    {% endblock body %}
+    {% endblock main %}
+
+    {% block javascripts %}{% endblock javascripts %}

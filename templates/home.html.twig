@@ -22,10 +22,6 @@
                                 <a href="{{ path('home_view') }}">Home</a>
                             </li>
                             <li>
-                                <i class="fa fa-calendar" aria-hidden="true"></i>
-                                <a href="">News</a>
-                            </li>
-                            <li>
                                 <i class="fa fa-camera" aria-hidden="true"></i>
                                 <a href="">Photo Gallery</a>
                             </li>
@@ -35,7 +31,7 @@
                             </li>
                             <li>
                                 <i class="fas fa-question-circle"></i>
-                                <a href="">About Us</a>
+                                <a href="{{ path('about_view') }}">About Us</a>
                             </li>
                         </ul> <!-- Nav Links List -->
                         <div class="divider"></div>
@@ -206,3 +202,7 @@
             </div> <!-- Content Section -->
 
         {% endblock main %}
+
+        {% block javascripts %}
+            <script src="{{ asset('js/home.js') }}"></script>
+        {% endblock javascripts %}

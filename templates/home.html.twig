@@ -82,126 +82,81 @@
         </header> <!-- End of Header -->
 
         <main>
-            <div class="container col-xl-10 content" id="content">
-                <!-- Author Cards Section Container -->
-                <div class="author-cards-container">
+            <div class="container col-xl-10 content" id="content"><!-- Content Section -->
+            <div class="authors-section">
+                <h2>Our Authors</h2>
+                <div class="row">
+                <div class="card author-cards" style="width: 20rem;">
+                    <img class="card-img-top" 
+                    src="{{ asset('img/default-avatar-profile-icon-grey-photo-placeholder-vector-17317730.jpg') }}">
+                        <div class="card-body">
+                            <h4 class="card-title">Card title</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                </div>
+
+                <div class="card author-cards" style="width: 20rem;">
+                    <img class="card-img-top" 
+                    src="{{ asset('img/default-avatar-profile-icon-grey-photo-placeholder-vector-17317730.jpg') }}">
+                        <div class="card-body">
+                            <h4 class="card-title">Card title</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                </div>
+
+                <div class="card author-cards" style="width: 20rem;">
+                    <img class="card-img-top" 
+                    src="{{ asset('img/default-avatar-profile-icon-grey-photo-placeholder-vector-17317730.jpg') }}">
+                        <div class="card-body">
+                            <h4 class="card-title">Card title</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                </div>
+
+                <div class="card author-cards" style="width: 20rem;">
+                    <img class="card-img-top" 
+                    src="{{ asset('img/default-avatar-profile-icon-grey-photo-placeholder-vector-17317730.jpg') }}">
+                        <div class="card-body">
+                            <h4 class="card-title">Card title</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                </div>
+            </div>
+
+                <div class="popular-section">
+                    <h2>Popular Reads</h2>
+                </div>
+
+                <div class="gallery-section">
+                    <h2>Photo Gallery</h2>
                     <div class="row">
-                            <div class="author-card">
-                                <div class="author-card-profile-img"></div>
-                                <div class="author-card-content">
-                                    <h3>Author Name</h3>
-                                    <p>Wildlife Blogger</p>
-                                    <p class="author-card-description">I love nature and all animals. Save the planet and don't harm the animals.
-                                    </p>
-                                    <a href="#" class="author-card-button">See More</a>
-                                </div>
-                            </div>
-                        <div class="author-card">
-                            <div class="author-card-profile-img"></div>
-                            <div class="author-card-content">
-                                <h3>Author Name</h3>
-                                <p>Wildlife Blogger</p>
-                                <p class="author-card-description">I love nature and all animals. Save the planet and don't harm the animals.
-                                </p>
-                                <a href="#" class="author-card-button">See More</a>
-                            </div>
-                        </div>
-                        <div class="author-card">
-                            <div class="author-card-profile-img"></div>
-                            <div class="author-card-content">
-                                <h3>Author Name</h3>
-                                <p>Wildlife Blogger</p>
-                                <p class="author-card-description">I love nature and all animals. Save the planet and don't harm the animals.
-                                </p>
-                                <a href="#" class="author-card-button">See More</a>
-                            </div>
-                        </div>
-                        <div class="author-card">
-                            <div class="author-card-profile-img"></div>
-                            <div class="author-card-content">
-                                <h3>Author Name</h3>
-                                <p>Wildlife Blogger</p>
-                                <p class="author-card-description">I love nature and all animals. Save the planet and don't harm the animals.
-                                </p>
-                                <a href="#" class="author-card-button">See More</a>
-                            </div>
-                        </div>
+                        <a href="" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                            <img src="{{ asset('img/default-avatar-profile-icon-grey-photo-placeholder-vector-17317730.jpg') }}" class="img-fluid rounded">
+                        </a>
+                        <a href="" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                            <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid rounded">
+                        </a>
+                        <a href="" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                            <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid rounded">
+                        </a>
                     </div>
-                </div> <!-- Author Cards Section -->
-                
-                    <!-- Blog Posts Section Cards -->
-                    <div class="blog-posts col-xl-12">
-                        <div class="row blogs">
-                            <div class="card blog-post" style="width: 22rem;">
-                                <div class="top-section">
-                                    <img src="{{ asset('img/geran-de-klerk-f0oe9P9Yixs-unsplash.jpg') }}">
-                                    <div class="blog-icon-container">
-                                        <div class="blog-icon"></div>
-                                    </div> <!-- Blog Icon Container -->
-                                </div> <!-- Left Section -->
-                                <div class="bottom-section">
-                                    <p id="author">Dylan Vanhout</p>
-                                    <p id="blog-date">2020</p>
-                                    <h3 id="blog-title">Why are African Wild Dogs so Endangered?</h3>
-                                    <button class="read-more-btn">Read More</button>
-                                </div> <!-- Right Section -->
-                            </div> <!-- Blog Post -->
-                            <div class="card blog-post" style="width: 22rem;">
-                                <div class="top-section">
-                                    <img src="{{ asset('img/geran-de-klerk-f0oe9P9Yixs-unsplash.jpg') }}">
-                                    <div class="blog-icon-container">
-                                        <div class="blog-icon"></div>
-                                    </div> <!-- Blog Icon Container -->
-                                </div> <!-- Left Section -->
-                                <div class="bottom-section">
-                                    <p id="author">Dylan Vanhout</p>
-                                    <p id="blog-date">2020</p>
-                                    <h3 id="blog-title">Why are African Wild Dogs so Endangered?</h3>
-                                    <button class="read-more-btn">Read More</button>
-                                </div> <!-- Right Section -->
-                            </div> <!-- Blog Post -->
-                            <div class="card blog-post" style="width: 22rem;">
-                                <div class="top-section">
-                                    <img src="{{ asset('img/geran-de-klerk-f0oe9P9Yixs-unsplash.jpg') }}">
-                                    <div class="blog-icon-container">
-                                        <div class="blog-icon"></div>
-                                    </div> <!-- Blog Icon Container -->
-                                </div> <!-- Left Section -->
-                                <div class="bottom-section">
-                                    <p id="author">Dylan Vanhout</p>
-                                    <p id="blog-date">2020</p>
-                                    <h3 id="blog-title">Why are African Wild Dogs so Endangered?</h3>
-                                    <button class="read-more-btn">Read More</button>
-                                </div> <!-- Right Section -->
-                            </div> <!-- Blog Post -->
-                            <div class="card blog-post" style="width: 22rem;">
-                                <div class="top-section">
-                                    <img src="{{ asset('img/geran-de-klerk-f0oe9P9Yixs-unsplash.jpg') }}">
-                                    <div class="blog-icon-container">
-                                        <div class="blog-icon"></div>
-                                    </div> <!-- Blog Icon Container -->
-                                </div> <!-- Left Section -->
-                                <div class="bottom-section">
-                                    <p id="author">Dylan Vanhout</p>
-                                    <p id="blog-date">2020</p>
-                                    <h3 id="blog-title">Why are African Wild Dogs so Endangered?</h3>
-                                    <button class="read-more-btn">Read More</button>
-                                </div> <!-- Right Section -->
-                            </div> <!-- Blog Post -->
-                        </div>
-                    </div> <!-- Blog Posts Section -->
 
-                <!--Gallery Section-->
-                <div class="gallery section">
-                    <div class="gallery">
-
-                        <div class="block" style="background-color: lightgray; height: 400px; width: 100%;"></div>
-
+                    <div class="row">
+                        <a href="" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                            <img src="https://unsplash.it/600.jpg?image=254" class="img-fluid rounded">
+                        </a>
+                        <a href="" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                            <img src="https://unsplash.it/600.jpg?image=255" class="img-fluid rounded">
+                        </a>
+                        <a href="" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                            <img src="https://unsplash.it/600.jpg?image=256" class="img-fluid rounded">
+                        </a>
                     </div>
                 </div>
-                <!--Gallery Section End-->
-
-            </div> <!-- Content Section -->
-
+            </div><!-- Content Section -->
         </main> <!-- Main Section -->
         {% endblock main %}

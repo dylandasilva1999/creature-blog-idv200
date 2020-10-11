@@ -40,3 +40,10 @@ window.addEventListener("scroll", function() {
 });
 
 
+//Lightbox Toggle Effect
+$(document).on("click", '[data-toggle="lightbox"]', function(event) {
+  event.preventDefault();
+  $(this).ekkoLightbox();
+});
+
+

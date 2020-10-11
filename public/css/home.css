@@ -456,13 +456,13 @@ AUTHOR SECTION
 .authors-section {
   height: 80vh;
   width: auto;
-  background-color: darkgrey;
+  /* background-color: darkgrey; */
 
 }
 
 .author-cards {
-  margin: 20px;
-}
+  margin: 50px;
+} 
 
 /*
 POPULAR SECTION

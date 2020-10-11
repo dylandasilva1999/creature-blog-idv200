@@ -403,87 +403,16 @@ button.write-blog-btn:hover, button.write-blog-btn:focus, button.write-blog-btn:
 CONTENT
 */
 
-.blog-posts {
-  height: auto;
-  margin-top: 5vh;
-}
-
-.blogs {
-  height: auto;
-}
-
-.blog-post {
-  margin-left: 2.3%;
-  margin-top: 2vh;
-  border-radius: 10px;
-}
-
-.top-section {
-  height: 30vh;
-  width: 100%;
-  background-color: #5D6B34;
-}
-
-.top-section img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-.blog-icon-container {
-  height: 60px;
-  width: 60px;
-  background-color: #ffffff;
-  margin-top: -105%;
-  margin-left: 78%;
-  position: absolute;
-  border-radius: 50%;
-}
-
-.blog-icon {
-  background-image: url("../../img/blogging.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 55%;
-  height: 55%;
-  margin-left: 22%;
-  margin-top: 22%;
-  transition: all 0.2s ease;
-}
-
-.blog-icon:hover {
-  transform: rotate(45deg);
-  transition: all 0.2s ease;
-}
-
-.bottom-section {
-  width: 100%;
-  height: auto;
-  padding-bottom: 15px;
-  background-color: #ffffff;
-  border-radius: 20px;
-}
-
-#author {
-  font-size: 15px;
-  font-weight: 400;
-  float: left;
-  margin-left: 9%;
-}
-
-#blog-date {
-  font-weight: 400;
-  margin-left: 20px;
-  margin-left: 80% !important; 
-}
-
-#blog-title {
-  width: 82%;
+#story-text {
+  font-size: 45px;
   font-weight: 700;
-  letter-spacing: 1px;
-  line-height: 35px;
-  margin-left: 9%;
-  font-size: 24px;
+  color: rgb(25, 25, 25);
+}
+
+.line {
+  height: 4px;
+  background-color: #5d6b34;
+  margin-top: 30px;
 }
 
 button.read-more-btn {
@@ -521,94 +450,31 @@ button.read-more-btn:hover, button.read-more-btn:focus, button.read-more-btn:act
   letter-spacing: 0.170rem;
 }
 
-
 /*
-**********************************************************************
-AUTHOR CARD **********************************************************
-**********************************************************************
+AUTHOR SECTION
 */
+.authors-section {
 
-.author-card {
-  width: 300px;
-  height: 450px;
-  display: inline-block;
-  text-align: center;
-  margin-top: 10%;
-  margin-left: 5%;
-  background-color: #fafafa;
-  border-radius: 15px;
-  box-shadow: 0 2px 3px rgb(86, 86, 86);
-  transition-duration: 0.3s;
 }
-
-.author-card-profile-img {
-  width: 130px;
-  height: 130px;
-  border: 3px solid #eee;
-  border-radius: 50%;
-  margin: 20px auto;
-  background-color: lightgray;
-  background-image: url();
-  background-size: cover;
-  transition-duration: 0.3s;
-}
-
-.author-card-profile-img:hover {
-  opacity: 0.5;
-}
-
-.author-card-content {
-  text-align: center;
-}
-
-.author-card-content p {
-  padding-top: 10px;
-}
-
-.author-card-description {
-  font-size: 0.8rem;
-  margin: 0 20px;
-}
-
-.author-card-button {
-  margin: 25px auto;
-  display: block;
-  width: 150px;
-  padding: 4px;
-  background-color: #5D6B34;
-  border-radius: 30px;
-  border: 2px solid white;
-  text-decoration: none;
-  color: #fff;
-  font-size: 0.8rem;
-  transition-duration: 0.3s;
-}
-
-.author-card-button:hover {
-  background-color: transparent;
-  border: 1px solid  #5D6B34;
-  color: black;
-}
-
-/*
-**********************************************************************
-AUTHOR CARD END ******************************************************
-**********************************************************************
-*/
-
-/*
-**********************************************************************
-EDITORS SECTION ******************************************************
-**********************************************************************
-*/
 
 
 
 /*
-**********************************************************************
-EDITORS SECTION END **************************************************
-**********************************************************************
+POPULAR SECTION
 */
+.popular-section {
+  height: 60vh;
+  background-color: lightgrey;
+}
+/*
+GALLERY SECTION
+*/
+.gallery-section {
+}
+.row {
+  margin: 15px;
+}
+
 
 /*
 RESPONSIVE CSS

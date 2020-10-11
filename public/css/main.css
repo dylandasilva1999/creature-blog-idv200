@@ -5,14 +5,27 @@
 }
 
 body {
-	background: #f6f5f7;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	font-family: 'Montserrat', sans-serif;
 	height: 100vh;
-	margin: -20px 0 50px;
+	padding: 0;
+	margin: 0;
+}
+
+.body {
+	background-image: url("../img/jaco-lou-bierman-bMjH8eOp6Gw-unsplash.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+}
+
+.div {
+	margin-top: 20vh !important;
+	margin: auto;
 }
 
 h1 {
@@ -45,9 +58,9 @@ a {
 
 button {
 	border-radius: 20px;
-    border: 1px solid gray;
+    border: 1px solid #CBAD4C;
     margin: 2px;
-	background-color: gray;
+	background-color: #CBAD4C;
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -94,9 +107,9 @@ input {
 	border-radius: 10px;
 	position: relative;
 	overflow: hidden;
-	width: 768px;
+	width: 900px;
 	max-width: 100%;
-	min-height: 480px;
+	min-height: 750px;
 }
 
 .form-container {
@@ -162,7 +175,9 @@ form p {
 }
 
 .overlay {
-	background: #c1c1c1;
+	background: #5D6B34;
+	background: -webkit-linear-gradient(to right, #5D6B34, #404724);
+	background: linear-gradient(to right, #5D6B34 #404724);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -212,10 +227,37 @@ form p {
 }
 
 .social-container {
-    margin: 6px 0;
-    height: 30px;
-    background-color: lightgrey;
-    width: 200px;
+	margin: 20px 0;
 }
 
+.social-container a {
+	border: 1px solid #DDDDDD;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 5px;
+	height: 40px;
+	width: 40px;
+}
+
+.cancel-btn {
+	float: left;
+	margin-left: -55%;
+	margin-top: 30px;
+}
+
+.register-btn {
+	float: left;
+	margin-left: 55%;
+	margin-top: -45px;
+}
+
+#info-text {
+	margin-top: 70px;
+}
+
+#signUp {
+	font-weight: 700;
+}
 

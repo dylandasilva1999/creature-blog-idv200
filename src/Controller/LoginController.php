@@ -5,14 +5,14 @@
     use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
     use Symfony\Component\Routing\Annotation\Route;
 
-    class IndividualBlogController extends AbstractController {
+    class LoginController extends AbstractController {
 
         /**
-         * @Route("/blog", name="blog_view")
+         * @Route("/", name="login_view")
          */
-        public function individualBlog() {
+        public function index() {
 
-            $view = 'individual-blog.html.twig';
+            $view = 'index.html.twig';
 
             return $this->render($view);
 

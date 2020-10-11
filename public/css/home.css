@@ -454,31 +454,22 @@ button.read-more-btn:hover, button.read-more-btn:focus, button.read-more-btn:act
 AUTHOR SECTION
 */
 .authors-section {
-  height: 80vh;
-  width: auto;
-  /* background-color: darkgrey; */
 
 }
 
-.author-cards {
-  margin: 50px;
-} 
+
 
 /*
 POPULAR SECTION
 */
 .popular-section {
-  height: 80vh;
-  width: auto;
+  height: 60vh;
   background-color: lightgrey;
 }
 /*
 GALLERY SECTION
 */
 .gallery-section {
-  height: 80vh;
-  width: auto;
-  background-color: darkgrey;
 }
 .row {
   margin: 15px;

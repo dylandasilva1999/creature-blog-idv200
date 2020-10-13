@@ -1,0 +1,9 @@
+> php bin/console doctrine:database:create
+
+> SHOW DATABASES;
+
+> USE creature;
+
+> INSERT INTO user_profile (username, email) VALUES ('Mark', 'mark@zuckerberg.com'),('Grace', 'grace@hopper.com'),('Bill','bill@gates.com'),('Dennis','dennis@ritchie.com');
+
+> SELECT * FROM user_profile;

@@ -97,22 +97,19 @@
 
 
                     <div class="row">
-                        This is the profile page of {{ user.name }} who has {{ user.friends|length }} friends.
+                        <h3>This is the profile page of {{ user.username }} ({{ user.email }}) who has {{ user|length }} friends.</h3>
                     </div>
                     <div class="row">
                         <ul>
-                            {% for friend in user.friends %}
-                                <li>{{ friend.name }}</li>
+                            {% for friend in user %}
+                                <li>{{ friend }}</li>
                             {% endfor %}
                         </ul>
                     </div>
 
-                
-                
-                
-                
-                
-                
+
+
+
                 <!-- Footer Start -->
                 <footer>
                     <div class="footer col-xl-12">

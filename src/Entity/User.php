@@ -4,7 +4,7 @@
     class User {
         private $id;
         private $name;
-        private $blogs;
+        private $friends;
 
         public function getId() { return $this->id;}
         public function setId($id) { $this->id = $id;}
@@ -14,19 +14,19 @@
     //getBlogs
     //addBlog
 
-    // getBlogs
-    public function getBlogs() {
-        if ($this->blogs == null) {
-        $this->blogs = array();
+    // getFriends
+    public function getFriends() {
+        if ($this->friends == null) {
+        $this->friends = array();
         }
-        return $this->blogs;
+        return $this->friends;
         }
-    // addBlog
-    public function addBlogs($blog) {
-        if ($this->blogs == null) {
-        $this->blogs = array();
+    // addFriend
+    public function addFriends($friend) {
+        if ($this->friends == null) {
+        $this->friends = array();
         }
-        array_push($this->blogs, $blog);
+        array_push($this->friends, $friend);
     }
 }
 ?>

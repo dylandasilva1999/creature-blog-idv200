@@ -3,6 +3,7 @@
         {% block title %}CRE | Profile{% endblock %}
 
         {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('css/base.css') }}">
             <link rel="stylesheet" href="{{ asset('css/profile.css') }}">
         {% endblock %}
 
@@ -92,7 +93,20 @@
 
         <main>
             <div class="container col-xl-10 content" id="content">
-                
+
+
+
+                    <div class="row">
+                        This is the profile page of {{ user.name }} who has {{ user.friends|length }} friends.
+                    </div>
+                    <div class="row">
+                        <ul>
+                            {% for friend in user.friends %}
+                                <li>{{ friend.name }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
                 
                 
                 

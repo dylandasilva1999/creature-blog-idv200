@@ -5,9 +5,8 @@
     use Symfony\Component\HttpFoundation\Response;
     use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
     use Symfony\Component\Routing\Annotation\Route;
-
+    use App\Entity\User;
     class ProfileController extends AbstractController {
-
         /**
          * @Route("/profile/{id}", name="profile_view")
          */
@@ -30,6 +29,11 @@
             $dennis = new User();
             $dennis->setId(4);
             $dennis->setName("Dennis");
+
+            $mark->addFriend($grace);
+            $mark->addFriend($bill);
+            $grace->addFriend($mark);
+            $bill->addFriend($mark);
                 
             $users = [$mark, $grace, $bill, $dennis];
 

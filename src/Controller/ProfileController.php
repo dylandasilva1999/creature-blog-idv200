@@ -52,45 +52,5 @@
             return $this->render($view, $model);
         }
 
-        /**
-        * @Route("/login", name="profile_new")
-        */
-        public function newProfile(Request $request) {
-
-            $userProfile = new UserProfile();
-
-            $form = $this->createForm(UserProfileType::class, $userProfile);
-
-            $form->handleRequest($request);
-
-            $form->handleRequest($request);
-
-            if ($form->isSubmitted() && $form->isValid()) {
-
-                // $form->getData() holds the submitted values
-                $userProfile = $form->getData();
-                $entityManager = $this->getDoctrine()->getManager();
-                $entityManager->persist($userProfile);
-                $entityManager->flush();
-
-                return $this->redirectToRoute('profile_success');
-            }
-
-            $view = 'index.html.twig';
-            $model = array('form' => $form->createView());
-
-            return $this->render($view, $model);
-        }
-
-        /**
-        * @Route("/success", name="profile_success")
-        */
-        public function successProfile(Request $request) {
-
-            $view = 'success.html.twig';
-            $model = array();
-
-            return $this->render($view, $model);
-        }
     }
 ?>

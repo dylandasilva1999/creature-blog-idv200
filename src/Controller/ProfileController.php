@@ -2,11 +2,13 @@
     // src/Controller/ProfileController.php
     namespace App\Controller;
 
+    use Symfony\Component\HttpFoundation\Request;
     use Symfony\Component\HttpFoundation\Response;
     use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
     use Symfony\Component\Routing\Annotation\Route;
 
     use App\Entity\UserProfile;
+    use App\Form\UserProfileType;
 
     class ProfileController extends AbstractController {
         /**
@@ -51,7 +53,7 @@
         }
 
         /**
-        * @Route("/register", name="profile_new")
+        * @Route("/login", name="profile_new")
         */
         public function newProfile(Request $request) {
 
@@ -61,8 +63,32 @@
 
             $form->handleRequest($request);
 
-            $view = 'register.html.twig';
+            $form->handleRequest($request);
+
+            if ($form->isSubmitted() && $form->isValid()) {
+
+                // $form->getData() holds the submitted values
+                $userProfile = $form->getData();
+                $entityManager = $this->getDoctrine()->getManager();
+                $entityManager->persist($userProfile);
+                $entityManager->flush();
+
+                return $this->redirectToRoute('profile_success');
+            }
+
+            $view = 'index.html.twig';
             $model = array('form' => $form->createView());
+
+            return $this->render($view, $model);
+        }
+
+        /**
+        * @Route("/success", name="profile_success")
+        */
+        public function successProfile(Request $request) {
+
+            $view = 'success.html.twig';
+            $model = array();
 
             return $this->render($view, $model);
         }

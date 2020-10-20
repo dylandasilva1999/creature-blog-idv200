@@ -5,27 +5,37 @@ namespace App\Entity;
 use App\Repository\UserProfileRepository;
 use Doctrine\ORM\Mapping as ORM;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
 /**
  * @ORM\Entity(repositoryClass=UserProfileRepository::class)
  */
 class UserProfile
 {
     /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     */
+    * @ORM\Id()
+    * @ORM\GeneratedValue(strategy="SEQUENCE")
+    * @ORM\Column(type="integer")
+    */
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     */
+    * @ORM\Column(type="string", length=255, nullable=true)
+    */
     private $username;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     */
+    * @ORM\Column(type="string", length=255)
+    * @Assert\NotBlank()
+    * @Assert\Email()
+    */
     private $email;
+
+    /**
+    * @ORM\Column(type="string", length=255)
+    * @Assert\NotBlank()
+    */
+    private $password;
 
     public function getId(): ?int
     {
@@ -52,6 +62,18 @@ class UserProfile
     public function setEmail(string $email): self
     {
         $this->email = $email;
+
+        return $this;
+    }
+
+    public function getPassword(): ?string
+    {
+        return $this->password;
+    }
+
+    public function setPassword(string $password): self
+    {
+        $this->password = $password;
 
         return $this;
     }

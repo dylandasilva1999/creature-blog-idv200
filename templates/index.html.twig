@@ -8,6 +8,10 @@
 
         {% block main %}
 
+            {{ form_start(form) }}
+
+            {{ form_errors(form) }}
+
             <div class="body container-fluid">
                 <div class="container div" id="container">
                     <div class="form-container sign-up-container">
@@ -18,11 +22,25 @@
                                 <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                             </div>
                             <span>OR</span>
-                            <input type="text"  placeholder="Full Name"/>
-                            <input type="email"  placeholder="Email Address"/>
-                            <input type="password"  placeholder="Password"/>
-                            <input type="confirmpassword" placeholder="Confirm Password"/>
-                            <input type="file" id="myFile" name="filename">
+
+                            {{ form_errors(form.username) }}
+                            {{ form_widget(form.username, {'attr': {'placeholder': 'Username'} }) }}
+
+                            <!-- <input type="text" name="username[username]" placeholder="Username"/> -->
+
+                            {{ form_errors(form.email) }}
+                            {{ form_widget(form.email, {'attr': {'placeholder': 'Email'} }) }}
+
+                            {# <input type="email" name="email[emai]"  placeholder="Email Address"/> #}
+
+                            {{ form_errors(form.password) }}
+                            {{ form_widget(form.password, {'attr': {'placeholder': 'Password'} }) }}
+
+                            {# <input type="password" name="password[password]"  placeholder="Password"/> #}
+
+                            <input type="file" id="myFile" name="filename[filename]">
+
+                            <button class="register-btn-right" name="submit" type="submit">SIGN UP</button>
 
                             <p id="signIn">Already have an account? <b>Sign In here</b></p>
                         </form>
@@ -35,7 +53,7 @@
                                 <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                             </div>
                             <span>OR</span>
-                            <input type="email"  placeholder="Email Address"/>
+                            <input type="text"  placeholder="Username"/>
                             <input type="password" placeholder="Password"/>
                             <button class="cancel-btn">CANCEL</button>
                             <button class="register-btn" id="signUp">REGISTER</button>
@@ -61,7 +79,7 @@
                 </div>
             </div>
 
-        </body>
+            {{ form_end(form) }}
 
     {% endblock main %}
 

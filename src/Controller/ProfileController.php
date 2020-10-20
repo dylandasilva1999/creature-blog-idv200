@@ -49,5 +49,22 @@
             // }
             return $this->render($view, $model);
         }
+
+        /**
+        * @Route("/register", name="profile_new")
+        */
+        public function newProfile(Request $request) {
+
+            $userProfile = new UserProfile();
+
+            $form = $this->createForm(UserProfileType::class, $userProfile);
+
+            $form->handleRequest($request);
+
+            $view = 'register.html.twig';
+            $model = array('form' => $form->createView());
+
+            return $this->render($view, $model);
+        }
     }
 ?>

@@ -253,6 +253,13 @@ form p {
 	margin-top: -45px;
 }
 
+.register-btn-right {
+	width: 100%;
+	float: left;
+	margin-left: 0%;
+	margin-top: 35px;
+}
+
 #info-text {
 	margin-top: 70px;
 }

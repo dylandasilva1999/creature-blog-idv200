@@ -1,0 +1,108 @@
+
+  
+{% extends 'base.html.twig' %}
+
+        {% block title %}CRE | Author Profile Page{% endblock %}
+
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('css/profilepage.css') }}">
+        {% endblock %}
+
+        {% block main %}
+
+
+<body>
+
+  <div class="container">
+    <div class="profile-header">
+      <div class="profile-img">
+        <img width="200" alt="Profile Image" src= "{{ asset('img/default.jpg') }}"> 
+      </div>
+      <div class="profile-nav-info">
+        <h3 class="user-name">Lisa Blue</h3>
+        <div class="address">
+          <p id="role" class="role">Author</p>
+        </div>
+  
+      </div>
+    </div>
+  
+    <div class="main-bd">
+      <div class="left-side">
+        <div class="profile-side">
+          <p class="user-mail"><i class="fa fa-envelope"></i> lisablue@gmail.com</p>
+          <div class="user-bio">
+            <h3>Bio</h3>
+            <p class="bio">
+              Lorem ipsum dolor sit amet, hello how consectetur adipisicing elit. Sint consectetur provident magni yohoho consequuntur, voluptatibus ghdfff exercitationem at quis similique. Optio, amet!
+            </p>
+          </div>
+          <div class="profile-btn">
+            <button class="createbtn" id="Create-post"><i class="fa fa-plus"></i> Create</button>
+          </div>
+
+        </div>
+  
+      </div>
+      <div class="right-side">
+
+        <table >
+
+ 
+
+          <tr>
+              <th>Date</th>
+              <th>Post Title</th>
+          </tr>
+         
+         
+           <tr>
+              <td>23-01-2020</td>
+              <td>My First Time in the Kruger</td>
+          </tr>
+         
+          <tr>
+         
+            <td>23-01-2020</td>
+            <td>My First Time in the Kruger</td>
+         
+          </tr>
+         
+          <tr>
+         
+            <td>23-01-2020</td>
+            <td>My First Time in the Kruger</td>
+         
+          </tr>
+         
+          <tr>
+         
+            <td>23-01-2020</td>
+            <td>My First Time in the Kruger</td>
+         
+          </tr>
+         
+          <tr>
+         
+            <td>23-01-2020</td>
+            <td>My First Time in the Kruger</td>
+         
+          </tr>
+         
+
+         
+          </table>
+  
+
+          </div>
+        </div>
+      </div>
+
+</body>
+
+
+
+{% endblock main %}
+        {% block javascripts %}
+            <script src="{{ asset('js/profilepage.js') }}"></script>
+        {% endblock javascripts %}

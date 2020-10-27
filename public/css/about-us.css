@@ -401,6 +401,12 @@ nav.stroke ul li a:hover:after {
   margin-top: 30px;
 }
 
+.image {
+  background-image: url("../img/david-clode-nyvR6wbU1ho-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /*
   
   FOOTER

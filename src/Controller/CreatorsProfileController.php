@@ -5,14 +5,14 @@
     use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
     use Symfony\Component\Routing\Annotation\Route;
 
-    class PhotoGalleryController extends AbstractController {
+    class CreatorsProfileController extends AbstractController {
 
         /**
-         * @Route("/photo-gallery", name="photo_gallery_view")
+         * @Route("/profile", name="creators_profile_view")
          */
-        public function photoGallery() {
+        public function creatorsProfile() {
 
-            $view = 'photo-gallery.html.twig';
+            $view = 'author-profile-page.html.twig';
 
             return $this->render($view);
 

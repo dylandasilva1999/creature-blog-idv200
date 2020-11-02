@@ -417,7 +417,7 @@ CONTENT
 }
 
 button.read-more-btn {
-  width: 70%;
+  width: 75%;
 	border-radius: 50px;
 	border: 2px solid white;
   background: #5D6B34;
@@ -431,7 +431,7 @@ button.read-more-btn {
   transition: transform 80ms ease-in;
   transition: all 0.3s ease-in-out;
   margin-top: 6%;
-  margin-left: 12%;
+  margin-left: 10%;
   margin-bottom: 15px;
 }
 

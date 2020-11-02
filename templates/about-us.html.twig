@@ -93,8 +93,66 @@
                 <div class="background-story col-xl-12">
                     <h4 id="story-text">Background</h4>
                     <div class="col-xl-12 line"></div>
-                    <div class="story-image col-xl-5"></div>
+                    <div class="row">
+                        <div class="story-image col-xl-5"></div>
+                        <div class="story-text col-xl-7">
+                            <p>
+                                A little story about Creature, is that it started out as a small business in the Kruger National Park!
+                                Then evolved into this blog site, where anybody post their wildlife experiences. Creature is a blog
+                                dedicated to those who are intereseted in the wildlife! Those who want to know news and experiences
+                                and interactions with the wild on a digital platform.
+
+                                <br>
+                                <br>
+                                
+                                It started out as a physical blog in the Kruger National Park, where people can go and post their
+                                letters or encounters on a board with a pin. It then started catching a drift and grew bigger and
+                                bigger, it was then when we decided in 2020 to make a digital website where people can sign up
+                                and post blogs and images about the wildlife.
+
+                                <br>
+                                <br>
+
+                                Lastly our blog is not specific to any country, anybody around the world will have access to this blog
+                                and post their encounters. We want to thank all who assisted in the process of grwoing our community
+                                and show awareness of how beautiful wildlife is!
+                            </p>
+                        </div>
+                    </div>
                 </div> <!-- Background Story -->
+
+                <!-- Footer Start -->
+                <footer>
+
+                    <div class="footer col-xl-12">
+                        <div class="row">
+                            <div class="logo-footer"></div>
+                            <div class="social-media-icons-footer d-none d-xl-block">
+                                <a href="https://www.instagram.com/"><img src="{{ asset('img/instagram.svg') }}"></a>
+                                <a href="https://www.facebook.com/"><img src="{{ asset('img/facebook.svg') }}"></a>
+                                <a href="https://twitter.com/"><img src="{{ asset('img/twitter.svg') }}"></a>
+                            </div> <!-- Social Media Icons Div-->
+                            <div class="footer-links">
+                                <ul class="footer-links-ul">
+                                    <li>
+                                        <a href="{{ path('home_view') }}">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('photo_gallery_view') }}">Photo Gallery</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('blogs_view') }}">Blog</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('about_view') }}">About Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div> <!-- Footer Row -->
+                    </div> <!-- Footer Div -->
+                    
+                </footer>
+                <!-- Footer End -->
 
             </div> <!-- Content Section -->
 

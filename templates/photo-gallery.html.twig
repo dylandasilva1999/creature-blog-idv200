@@ -1,0 +1,159 @@
+{% extends 'base.html.twig' %}
+
+        {% block title %}CRE | Photo Gallery{% endblock %}
+
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('css/photo-gallery.css') }}">
+        {% endblock %}
+
+        {% block main %}
+
+            <header>
+
+                <div class="container-fluid">
+                    <div class="header-image" id="parallax">
+                        <nav class="stroke">
+                            <div class="logo">
+                                <img src="{{ asset('img/colour-logo.svg') }}">
+                                <h4 id="logo-text">CREATURE</h4>
+                            </div> <!-- Logo Container -->
+                            <ul class="nav-links">
+                                <li>
+                                    <i class="fas fa-home"></i>
+                                    <a href="{{ path('home_view') }}">Home</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-camera" aria-hidden="true"></i>
+                                    <a href="{{ path('photo_gallery_view') }}">Photo Gallery</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-comment" aria-hidden="true"></i>
+                                    <a href="{{ path('blogs_view') }}">Blog</a>
+                                </li>
+                                <li>
+                                    <i class="fas fa-question-circle"></i>
+                                    <a href="{{ path('about_view') }}">About Us</a>
+                                </li>
+                            </ul> <!-- Nav Links List -->
+                            <div class="divider"></div>
+                            <div class="profile-container">
+                                <h4 id="user-name">Greg Stander</h4>
+                                <div class="profile-img">
+                                    <img src="{{ asset('img/default-avatar-profile-icon-grey-photo-placeholder-vector-17317730.jpg') }}">
+                                </div> <!-- Profile Image Container -->
+                            </div> <!-- Profile Container -->
+                            <div class="burger">
+                                <div class="line1"></div>
+                                <div class="line2"></div>
+                                <div class="line3"></div>
+                            </div>
+                        </nav> <!-- End of Navigation -->
+
+                        <div class="social-media-icons-header d-none d-xl-block">
+
+                            <a href="https://www.instagram.com/"><img src="{{ asset('img/instagram.svg') }}"></a>
+                            <a href="https://www.facebook.com/"><img src="{{ asset('img/facebook.svg') }}"></a>
+                            <a href="https://twitter.com/"><img src="{{ asset('img/twitter.svg') }}"></a>
+            
+                        </div> <!-- Social Media Icons Div-->
+
+                        <div class="header-content col-xl-6 col-10">
+
+                            <div class="welcome-blog-text col-xl-6">
+                                <h4 id="welcome-text">Come View Our</h4>
+                                <div class="underline col-xl-6 col-8 col-sm-5"></div>
+                            </div> <!-- Welcome Blog Container -->
+        
+                            <div class="creature-blog-heading">
+                                <h1 id="creature-heading">Photo Gallery</h1>
+                            </div> <!-- Creature Blog Heading Container -->
+        
+                            <div class="intro-paragraph-header col-xl-8">
+                                <p id="intro-paragraph">
+                                    The photo gallery will display images of the wild life in action, and to view what
+                                    the wild life experiences are like.
+                                </p>
+                            </div> <!-- Intro Paragraph Header -->
+
+                        </div> <!-- Header Content -->
+
+                        <div class="scroll-down-icon bounce">
+                            <a href="#cards"><img src="{{ asset('img/down-icon.svg') }}"></a>
+                        </div> <!-- Scroll down icon -->
+
+                        <div class="colour-overlay"></div>
+
+                    </div> <!-- Header Image Container -->
+                </div> <!-- Container Fluid Header -->
+
+            </header> <!-- End of Header -->
+
+            <div class="container col-xl-10 content" id="content">
+
+                <div class="background-story col-xl-12">
+                    <h4 id="story-text">Photo Gallery</h4>
+                    <div class="col-xl-12 line"></div>
+                    <div class="row photo-gallery"> 
+                        <div class="column">
+                            <img src="https://source.unsplash.com/ZNGos3i-wyA/1600x1900" style="width:100%">
+                            <img src="https://source.unsplash.com/ADUiP4nJwds/1600x1900" style="width:100%">
+                            <img src="https://source.unsplash.com/3RnbuQJVTcw/1600x1900" style="width:100%">
+                        </div>
+                        <div class="column">
+                            <img src="https://source.unsplash.com/D1_W669KaHU/1600x1900" style="width:100%">
+                            <img src="https://source.unsplash.com/f0oe9P9Yixs/1600x1900" style="width:100%">
+                            <img src="https://source.unsplash.com/3QwGAsBWAis/1600x1900" style="width:100%">
+                        </div> 
+                        <div class="column">
+                            <img src="https://source.unsplash.com/AX9sJ-mPoL4/1600x1900" style="width:100%">
+                            <img src="https://source.unsplash.com/wYy3rvvgjAU/1600x1900" style="width:100%">
+                            <img src="https://source.unsplash.com/YJ51bUSowOo/1600x1900" style="width:100%">
+                        </div>
+                        <div class="column">
+                            <img src="https://source.unsplash.com/FhbyES4BjG8/1600x1900" style="width:100%">
+                            <img src="https://source.unsplash.com/yKiLWMWquKE/1600x1900" style="width:100%">
+                            <img src="https://source.unsplash.com/N9s3FjzsstM/1600x1900" style="width:100%">
+                        </div>
+                    </div>
+                </div> <!-- Background Story -->
+
+                <!-- Footer Start -->
+                <footer>
+
+                    <div class="footer col-xl-12">
+                        <div class="row">
+                            <div class="logo-footer"></div>
+                            <div class="social-media-icons-footer d-none d-xl-block">
+                                <a href="https://www.instagram.com/"><img src="{{ asset('img/instagram.svg') }}"></a>
+                                <a href="https://www.facebook.com/"><img src="{{ asset('img/facebook.svg') }}"></a>
+                                <a href="https://twitter.com/"><img src="{{ asset('img/twitter.svg') }}"></a>
+                            </div> <!-- Social Media Icons Div-->
+                            <div class="footer-links">
+                                <ul class="footer-links-ul">
+                                    <li>
+                                        <a href="{{ path('home_view') }}">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Photo Gallery</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('blogs_view') }}">Blog</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">About Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div> <!-- Footer Row -->
+                    </div> <!-- Footer Div -->
+                    
+                </footer>
+                <!-- Footer End -->
+
+            </div> <!-- Content Section -->
+
+        {% endblock main %}
+
+        {% block javascripts %}
+            <script src="{{ asset('js/about-us.js') }}"></script>
+        {% endblock javascripts %}

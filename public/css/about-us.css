@@ -407,6 +407,23 @@ nav.stroke ul li a:hover:after {
   background-size: cover;
 }
 
+.story-image {
+  background-image: url("../img/background-01.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  margin-top: 60px;
+}
+
+.story-text p {
+  font-size: 25px;
+  font-weight: 400;
+  color: rgb(25, 25, 25);
+  margin-top: 60px;
+  margin-left: 5%;
+  line-height: 35px;
+}
+
 /*
   
   FOOTER
@@ -423,7 +440,7 @@ nav.stroke ul li a:hover:after {
 .logo-footer {
   width: 120px;
   height: 120px;
-  background-image: url("../../img/icons/colour-logo.svg");
+  background-image: url("../img/colour-logo.svg");
   background-repeat: no-repeat;
 }
 

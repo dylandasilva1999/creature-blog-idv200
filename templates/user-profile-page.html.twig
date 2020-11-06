@@ -1,37 +1,27 @@
-
-  
 {% extends 'base.html.twig' %}
 
         {% block title %}CRE | User Profile Page{% endblock %}
 
         {% block stylesheets %}
-            <link rel="stylesheet" href="{{ asset('css/profilepage.css') }}">
-            <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="{{ asset('css/profile.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/home.css') }}">
         {% endblock %}
 
         {% block main %}
 
 <body>
-    
- <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
-
   <div class="container">
       <div class="profile-header">
           <div class="profile-img">
-              <img width="200" alt="Profile Image" src= "{{ asset('img/default.jpg') }}">
+              <img width="200" alt="Profile Image" src= "{{ asset('img/default-avatar-profile-icon-grey-photo-placeholder-vector-17317730.jpg') }}">
           </div>
-
       <div class="profile-nav-info">
           <h3 class="user-name">Terry Green</h3>
           <div class="address">
               <p id="role" class="role">User - MY COMMENT HISTORY</p>
           </div>
-  
       </div>
       </div>
-  
     <div class="main-bd">
       <div class="left-side">
         <div class="profile-side">
@@ -45,104 +35,62 @@
           <div class="profile-btn">
             <button class="createbtn" id="Create-post"><i class="fa fa-plus"></i> READ</button>
           </div>
-
         </div>
-        
       </div>
-
       <div class="right-side">
-    
-
           <table >
-
- 
-
             <tr>
                 <th>Date</th>
                 <th>Post Title</th>
                 <th>My Comment </th>
             </tr>
-           
-           
-             <tr>
+            <tr>
                 <td>23-01-2020</td>
                 <td>My First Time in the Kruger</td>
                 <td>Beautiful pictures! Thanks for Sharing!</td>
             </tr>
-           
-            <tr>
-           
-              <td>23-01-2020</td>
-              <td>My First Time in the Kruger</td>
-              <td>Beautiful pictures! Thanks for Sharing!</td>
-           
-            </tr>
-           
-            <tr>
-           
-              <td>23-01-2020</td>
-              <td>My First Time in the Kruger</td>
-              <td>Beautiful pictures! Thanks for Sharing!</td>
-           
-            </tr>
-           
-            <tr>
-           
-              <td>23-01-2020</td>
-              <td>My First Time in the Kruger</td>
-              <td>Beautiful pictures! Thanks for Sharing!</td>
-           
-            </tr>
-           
-            <tr>
-           
-              <td>23-01-2020</td>
-              <td>My First Time in the Kruger</td>
-              <td>Beautiful pictures! Thanks for Sharing!</td>
-           
-            </tr>
-           
             <tr>
               <td>23-01-2020</td>
               <td>My First Time in the Kruger</td>
               <td>Beautiful pictures! Thanks for Sharing!</td>
-           
             </tr>
-           
             <tr>
-           
               <td>23-01-2020</td>
               <td>My First Time in the Kruger</td>
               <td>Beautiful pictures! Thanks for Sharing!</td>
-           
             </tr>
-           
             <tr>
-           
               <td>23-01-2020</td>
               <td>My First Time in the Kruger</td>
               <td>Beautiful pictures! Thanks for Sharing!</td>
-           
             </tr>
-           
+            <tr>
+              <td>23-01-2020</td>
+              <td>My First Time in the Kruger</td>
+              <td>Beautiful pictures! Thanks for Sharing!</td>
+            </tr>
+            <tr>
+              <td>23-01-2020</td>
+              <td>My First Time in the Kruger</td>
+              <td>Beautiful pictures! Thanks for Sharing!</td>
+            </tr>
+            <tr>
+              <td>23-01-2020</td>
+              <td>My First Time in the Kruger</td>
+              <td>Beautiful pictures! Thanks for Sharing!</td>
+            </tr>
+            <tr>
+              <td>23-01-2020</td>
+              <td>My First Time in the Kruger</td>
+              <td>Beautiful pictures! Thanks for Sharing!</td>
+            </tr>
             </table>
-
-
-
         </div>
-
-        
-          </div>
-          
-        </div>
-
-
-
+      </div>
+    </div>
 </body>
 
-
-
 {% endblock main %}
-        {% block javascripts %}
-            <script src="{{ asset('js/profilepage.js') }}"></script>
-        {% endblock javascripts %}
+{% block javascripts %}
+<script src="{{ asset('js/profilepage.js') }}"></script>
+{% endblock javascripts %}

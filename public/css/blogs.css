@@ -793,6 +793,10 @@ FOOTER
   font-weight: 700;
 }
 
+.modal {
+  width: 90%;
+}
+
 .modal-content {
   width: 800px;
 }

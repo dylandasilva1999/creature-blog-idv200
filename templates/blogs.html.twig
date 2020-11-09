@@ -77,7 +77,13 @@
 
                         <button class="write-blog-btn" data-toggle="modal" data-target="#createBlog">Create Blog</button>
 
-                    </div> <!-- Header Content -->
+                    </div> <!-- Header Content -->                    
+
+                    <div class="scroll-down-icon bounce">
+                        <a href="#cards"><img src="{{ asset('img/down-icon.svg') }}"></a>
+                    </div> <!-- Scroll down icon -->
+
+                    <div class="colour-overlay"></div>
 
                     <div class="modal fade" id="createBlog" tabindex="-1" role="dialog" aria-hidden="false">
                         <div class="modal-dialog modal-register">
@@ -90,9 +96,10 @@
                                     <h3 class="modal-title text-center">Create a blog post</h3>
                                 </div>
                                 <div class="modal-body">
-                                    <div class="form-group">
-                                        <label>Name</label>
+                                <div class="form-group">
+                                    <label>Name</label>
                                     <input type="text" value="" placeholder="Name" class="form-control" />
+                                    </div>    
                                 <div class="form-group">
                                     <label>Blog Title</label>
                                     <input type="text" value="" placeholder="Blog Title" class="form-control" />
@@ -110,12 +117,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="scroll-down-icon bounce">
-                        <a href="#cards"><img src="{{ asset('img/down-icon.svg') }}"></a>
-                    </div> <!-- Scroll down icon -->
-
-                    <div class="colour-overlay"></div>
 
                 </div> <!-- Header Image Container -->
             </div> <!-- Container Fluid Header -->

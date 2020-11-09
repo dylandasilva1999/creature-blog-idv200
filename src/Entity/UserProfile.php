@@ -32,6 +32,11 @@ class UserProfile
     private $email;
 
     /**
+     * @ORM\Column(type="json")
+     */
+    private $roles = [];
+
+    /**
     * @ORM\Column(type="string", length=255)
     * @Assert\NotBlank()
     */
@@ -73,7 +78,7 @@ class UserProfile
 
     public function getPassword(): ?string
     {
-        return $this->password;
+        return (string) $this->password;
     }
 
     public function setPassword(string $password): self
@@ -92,6 +97,19 @@ class UserProfile
     {
         $this->image = $image;
 
+        return $this;
+    }
+
+    public function getRoles(): array
+    {
+        $roles = $this->roles;
+        $roles[] = 'ROLE_USER';
+        return array_unique($roles);
+    }
+
+    public function setRoles(array $roles): self
+    {
+        $this->roles = $roles;
         return $this;
     }
 }

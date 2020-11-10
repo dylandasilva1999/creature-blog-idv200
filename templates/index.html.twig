@@ -13,9 +13,11 @@
                 <div class="body container-fluid">
                     <div class="container div" id="container">
 
-                        {{ form_start(form) }}
+                        {# {{ form_start(form) }}
 
-                        {{ form_errors(form) }}
+                        {{ form_errors(form) }} #}
+
+                        {{ form_start(form) }}
                         
                         <div class="form-container sign-up-container">
                             <form action="post">
@@ -26,48 +28,55 @@
                                 </div>
                                 <span>OR</span>
 
-                                {{ form_widget(form.username) }}
-                                {{ form_errors(form.username) }}
+                                {# {{ form_widget(form.username) }}
+                                {{ form_errors(form.username) }} #}
 
-                                <!-- <input type="text" name="username[username]" placeholder="Username"/> -->
+                                {{ form_row(form.username, {'attr': {'class': 'form-control'}}) }}
+                                {# <input type="text" name="username[username]" placeholder="Username" required/> #}
 
-                                {{ form_widget(form.email) }}
-                                {{ form_errors(form.email) }}
+                                {# {{ form_widget(form.email) }}
+                                {{ form_errors(form.email) }} #}
 
-                                {# <input type="email" name="email[emai]"  placeholder="Email Address"/> #}
+                                {{ form_row(form.email, {'attr': {'class': 'form-control'}}) }}
+                                {# <input type="email" name="email[emai]"  placeholder="Email Address" required/> #}
 
-                                {{ form_widget(form.password) }}
-                                {{ form_errors(form.password) }}
+                                {# {{ form_widget(form.password) }}
+                                {{ form_errors(form.password) }} #}
 
-                                {# <input type="password" name="password[password]"  placeholder="Password"/> #}
+                                {{ form_row(form.password, {'attr': {'class':'form-control'}}) }}
+                                {# <input type="password" name="password[password]"  placeholder="Password" required/> #}
 
-                                {{ form_widget(form.image) }}
-                                {{ form_errors(form.image) }}
+                                {# {{ form_widget(form.image) }}
+                                {{ form_errors(form.image) }} #}
 
+                                {{ form_row(form.image, {'attr': {'class':'form-control'}}) }}
                                 {# <input type="file" id="myFile" name="filename[filename]"> #}
 
                                 {# {{ form_widget(form.register) }}
                                 {{ form_errors(form.register) }} #}
 
-                                {# <button class="register-btn-right" name="submit" type="submit">SIGN UP</button> #}
+                                <button class="register-btn-right" name="submit" type="submit">SIGN UP</button>
 
                                 <p id="signIn">Already have an account? <b>Sign In here</b></p>
                             </form>
                         </div>
+
+                        {{ form_end(form) }}
+
                         <div class="form-container sign-in-container">
-                            <form action="#">
+                            <form action="post">
                                 <h1>Sign in</h1>
                                 <div class="social-container">
                                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                                 </div>
                                 <span>OR</span>
-                                <input type="text"  placeholder="Username"/>
-                                <input type="password" placeholder="Password"/>
+                                <input type="text" value="" id="username-sign-in" placeholder="Username" name="username" required/>
+                                <input type="password" placeholder="Password" name="password" requried />
                                 <button class="cancel-btn">CANCEL</button>
-                                <button class="register-btn" id="signUp">REGISTER</button>
+                                <button class="register-btn">SIGN IN</button>
 
-                                <p id="info-text">Don't have an account? <b>Sign Up!</b></p>
+                                <p id="signUp">Don't have an account? <a>Sign Up!</a></p>
                             </form>
                             </form>
                         </div>
@@ -88,7 +97,7 @@
                     </div>
                 </div>
 
-                {{ form_end(form) }}
+                {# {{ form_end(form) }} #}
 
         {% endblock main %}
 

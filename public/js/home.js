@@ -1,5 +1,4 @@
 //Javascript Code
-
 //Navigation Bar
 window.addEventListener("scroll", function() {
     var navbar = document.querySelector("nav");
@@ -23,7 +22,6 @@ const navSlide = () => {
                 link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.4}s`
             }
         });
-
         //Burger Animation
         burger.classList.toggle('toggle');
     });
@@ -38,8 +36,3 @@ window.addEventListener("scroll", function() {
     let offset = window.pageYOffset;
     parallax.style.backgroundPositionY = offset * 0.1 + "px";
 });
-
-
-
-
-

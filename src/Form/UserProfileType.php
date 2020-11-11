@@ -2,6 +2,8 @@
     // src/Form/UserProfileType.php
     namespace App\Form;
 
+    use App\Entity\UserProfile;
+
     use Symfony\Component\Form\AbstractType;
     use Symfony\Component\Form\FormBuilderInterface;
     use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -41,8 +43,26 @@
                     'placeholder' => 'Upload An Image'
                 ]
                 
-            ]);
+            ])
+
+            ->add(
+                'submit',
+                SubmitType::class,
+                [
+                    'attr' => ['class' => 'form-control btn-primary pull-right'],
+                    'label' => 'SIGN UP'
+                ]
+            );
 
         }
+
+        public function configureOptions(OptionsResolver $resolver)
+        {
+        $resolver->setDefaults([
+            'data_class' => UserProfile::class,
+        ]);
     }
+
+    }
+    
 ?>

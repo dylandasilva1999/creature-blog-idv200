@@ -25,9 +25,9 @@
         */
         public function newProfile(Request $request) {
 
-            $userProfile = new UserProfile();
+            $user = new UserProfile();
 
-            $form = $this->createForm(UserProfileType::class, $userProfile);
+            $form = $this->createForm(UserProfileType::class, $user);
 
             $form->handleRequest($request);
 
@@ -36,9 +36,9 @@
                 $user->setPassword($this->passwordEncoder->encodePassword($user, $user->getPassword()));
 
                 // $form->getData() holds the submitted values
-                $userProfile = $form->getData();
+                $user = $form->getData();
                 $entityManager = $this->getDoctrine()->getManager();
-                $entityManager->persist($userProfile);
+                $entityManager->persist($user);
                 $entityManager->flush();
 
                 return $this->redirectToRoute('profile_success');

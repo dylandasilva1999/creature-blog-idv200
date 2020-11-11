@@ -49,11 +49,13 @@
                                 {# {{ form_widget(form.image) }}
                                 {{ form_errors(form.image) }} #}
 
-                                {{ form_row(form.image, {'attr': {'class':'form-control'}}) }}
+                                {# {{ form_row(form.image, {'attr': {'class':'form-control'}}) }} #}
                                 {# <input type="file" id="myFile" name="filename[filename]"> #}
 
                                 {# {{ form_widget(form.register) }}
                                 {{ form_errors(form.register) }} #}
+
+                                {{ form_row(form.submit) }}
 
                                 <button class="register-btn-right" name="submit" type="submit">SIGN UP</button>
 
@@ -78,8 +80,8 @@
 
                                 <p id="signUp">Don't have an account? <a>Sign Up!</a></p>
                             </form>
-                            </form>
                         </div>
+
                         <div class="overlay-container">
                             <div class="overlay">
                                 <div class="overlay-panel overlay-left">

@@ -17,10 +17,11 @@
 
                         {{ form_errors(form) }} #}
 
-                        {{ form_start(form) }}
+                        
                         
                         <div class="form-container sign-up-container">
-                            <form action="post">
+                            {{ form_start(form) }}
+                            <form action="post" id="myForm">
                                 <h1>Create Account</h1>
                                 <div class="social-container">
                                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -30,26 +31,25 @@
 
                                 {{ form(form) }}
 
-                                <p id="signIn">Already have an account? <b>Sign In here</b></p>
                             </form>
+                            {{ form_end(form) }}
+                            
                         </div>
 
-                        {{ form_end(form) }}
-
                         <div class="form-container sign-in-container">
-                            <form action="post">
+
+                            <form action="" method="POST">
                                 <h1>Sign in</h1>
                                 <div class="social-container">
                                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                                 </div>
                                 <span>OR</span>
-                                <input type="text" value="" id="username-sign-in" placeholder="Username" name="username" required/>
-                                <input type="password" placeholder="Password" name="password" requried />
-                                <button class="cancel-btn">CANCEL</button>
-                                <button class="register-btn">SIGN IN</button>
-
+                                <input type="text" value="" id="username-sign-in" placeholder="Username" name="_username" required/>
+                                <input type="password" placeholder="Password" name="_password" requried />
+                                <button class="register-btn" type="submit">LOG IN</button>
                                 <p id="signUp">Don't have an account? <a>Sign Up!</a></p>
+                                
                             </form>
                         </div>
 
@@ -58,12 +58,11 @@
                                 <div class="overlay-panel overlay-left">
                                     <h1>Become part of the pack, today.</h1>
                                     <p>Become a wildlife enthusiast with us, join in on the fun blogs and exciting news about the wildlife</p>
-                                
+                                    <p id="signIn">Already have an account? <b>Sign In here</b></p>
                                 </div>
                                 <div class="overlay-panel overlay-right">
                                     <h1>Welcome back to the wild.</h1>
                                     <p>Login and tell us about your journey in the wildlife!</p>
-                                    
                                 </div>
                             </div>
                         </div>

@@ -34,7 +34,7 @@
 
             ->add('password', PasswordType::class, [
                 'attr' => [
-                        'placeholder' => 'Password'
+                        'placeholder' => 'Password',
                 ]
             ])
 

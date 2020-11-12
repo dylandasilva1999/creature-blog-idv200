@@ -11,8 +11,8 @@ use Symfony\Component\Security\Core\User\UserInterface;
 /**
  * @ORM\Entity(repositoryClass=UserProfileRepository::class)
  */
-class UserProfile
-{
+class UserProfile implements UserInterface
+{ 
     /**
     * @ORM\Id()
     * @ORM\GeneratedValue(strategy="SEQUENCE")
@@ -37,6 +37,11 @@ class UserProfile
     * @Assert\NotBlank()
     */
     public $password;
+
+    /**
+     * @ORM\Column(type="json")
+     */
+    private $roles = [];
 
     public function getId(): ?int
     {
@@ -75,6 +80,33 @@ class UserProfile
         $this->email = $email;
 
         return $this;
+    }
+
+    /**
+     * @see UserInterface
+     */
+    public function getRoles(): array
+    {
+        $roles = $this->roles;
+        // guarantee every user at least has ROLE_USER
+        $roles[] = 'ROLE_USER';
+
+        return array_unique($roles);
+    }
+
+    public function setRoles(array $roles): self
+    {
+        $this->roles = $roles;
+
+        return $this;
+    }
+
+    public function getSalt() {
+
+    }
+
+    public function eraseCredentials() {
+        
     }
 
     /**

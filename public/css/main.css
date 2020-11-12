@@ -248,9 +248,10 @@ form p {
 }
 
 .register-btn {
+	width: 100%;
 	float: left;
-	margin-left: 55%;
-	margin-top: -45px;
+	margin-left: 0%;
+	margin-top: 25px;
 }
 
 .register-btn-right {

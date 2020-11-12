@@ -2,212 +2,80 @@
 
 namespace App\Entity;
 
+use App\Repository\BlogPostRepository;
 use Doctrine\ORM\Mapping as ORM;
 
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Security\Core\User\UserInterface;
+
 /**
- * BlogPost
- *
- * @ORM\Table(name="blog_post")
- * @ORM\Entity(repositoryClass="App\Repository\BlogPostRepository")
- * @ORM\HasLifecycleCallbacks
+ * @ORM\Entity(repositoryClass=BlogPostRepository::class)
  */
 class BlogPost
 {
     /**
-     * @var int
-     *
-     * @ORM\Column(name="id", type="integer")
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\GeneratedValue(strategy="SEQUENCE")
+     * @ORM\Column(type="integer")
      */
-    private $id;
+    public $id;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="blog_title", type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\NotBlank()
      */
-    private $blogTitle;
+    public $author;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="blog_content", type="string", length=2000)
+     * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
      */
-    private $blogContent;
+    public $blogTitle;
 
     /**
-     * @var Author
-     *
-     * @ORM\ManyToOne(targetEntity="Author")
-     * @ORM\JoinColumn(name="author_id", referencedColumnName="id")
+     * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
      */
-    private $author;
+    public $blogContent;
 
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="created_at", type="datetimetz")
-     */
-    private $createdAt;
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="updated_at", type="datetime")
-     */
-    private $updatedAt;
-
-
-    /**
-     * Get id
-     *
-     * @return int
-     */
-    public function getId()
+    public function getId(): ?int
     {
         return $this->id;
     }
 
-    /**
-     * Set blogTitle
-     *
-     * @param string $blogTitle
-     *
-     * @return BlogPost
-     */
-    public function setBlogTitle($blogTitle)
+    public function getAuthor(): ?string
     {
-        $this->blogTitle = $blogTitle;
-
-        return $this;
+        return $this->author;
     }
 
-    /**
-     * Get blogTitle
-     *
-     * @return string
-     */
-    public function getBlogTitle()
-    {
-        return $this->blogTitle;
-    }
-
-    /**
-     * Set blogContent
-     *
-     * @param string $blogContent
-     *
-     * @return BlogPost
-     */
-    public function setBlogContent($blogContent)
-    {
-        $this->blogContent = $blogContent;
-
-        return $this;
-    }
-
-    /**
-     * Get blogContent
-     *
-     * @return string
-     */
-    public function getBlogContent()
-    {
-        return $this->blogContent;
-    }
-
-    /**
-     * Set author
-     *
-     * @param Author $author
-     *
-     * @return BlogPost
-     */
-    public function setAuthor(Author $author)
+    public function setAuthor(string $author): self
     {
         $this->author = $author;
 
         return $this;
     }
 
-    /**
-     * Get author
-     *
-     * @return Author
-     */
-    public function getAuthor()
+    public function getBlogTitle(): ?string
     {
-        return $this->author;
+        return $this->blogTitle;
     }
 
-    /**
-     * Set createdAt
-     *
-     * @param \DateTime $createdAt
-     *
-     * @return BlogPost
-     */
-    public function setCreatedAt($createdAt)
+    public function setBlogTitle(string $blogTitle): self
     {
-        $this->createdAt = $createdAt;
+        $this->blogTitle = $blogTitle;
 
         return $this;
     }
 
-    /**
-     * Get createdAt
-     *
-     * @return \DateTime
-     */
-    public function getCreatedAt()
+    public function getBlogContent(): ?string
     {
-        return $this->createdAt;
+        return $this->blogContent;
     }
 
-    /**
-     * Set updatedAt
-     *
-     * @param \DateTime $updatedAt
-     *
-     * @return BlogPost
-     */
-    public function setUpdatedAt($updatedAt)
+    public function setBlogContent(string $blogContent): self
     {
-        $this->updatedAt = $updatedAt;
+        $this->blogContent = $blogContent;
 
         return $this;
-    }
-
-    /**
-     * Get updatedAt
-     *
-     * @return \DateTime
-     */
-    public function getUpdatedAt()
-    {
-        return $this->updatedAt;
-    }
-
-    /**
-     * @ORM\PrePersist
-     */
-    public function prePersist()
-    {
-        if (!$this->getCreatedAt()) {
-            $this->setCreatedAt(new \DateTime());
-        }
-
-        if (!$this->getUpdatedAt()) {
-            $this->setUpdatedAt(new \DateTime());
-        }
-    }
-
-    /**
-     * @ORM\PreUpdate
-     */
-    public function preUpdate()
-    {
-        $this->setUpdatedAt(new \DateTime());
     }
 }

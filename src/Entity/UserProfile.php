@@ -11,7 +11,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 /**
  * @ORM\Entity(repositoryClass=UserProfileRepository::class)
  */
-class UserProfile implements UserInterface
+class UserProfile implements UserInterface, \Serializable
 { 
     /**
     * @ORM\Id()
@@ -102,11 +102,35 @@ class UserProfile implements UserInterface
     }
 
     public function getSalt() {
-
+        
+        return null;
     }
 
     public function eraseCredentials() {
         
+    }
+
+    public function serialize()
+    {
+        return serialize(array(
+            $this->id,
+            $this->username,
+            $this->password,
+            // see section on salt below
+            // $this->salt,
+        ));
+    }
+
+    /** @see \Serializable::unserialize() */
+    public function unserialize($serialized)
+    {
+        list (
+            $this->id,
+            $this->username,
+            $this->password,
+            // see section on salt below
+            // $this->salt
+        ) = unserialize($serialized, array('allowed_classes' => false));
     }
 
     /**

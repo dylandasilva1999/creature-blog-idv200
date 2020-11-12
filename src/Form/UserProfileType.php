@@ -41,7 +41,7 @@
             ->add(
                 'submit',SubmitType::class,
                 [
-                    'attr' => ['class' => 'form-control btn-primary pull-right'],
+                    'attr' => ['class' => 'form-control btn-primary pull-right sign-up-btn'],
                     'label' => 'SIGN UP'
                 ]
             );

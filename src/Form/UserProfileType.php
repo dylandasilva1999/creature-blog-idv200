@@ -34,22 +34,14 @@
 
             ->add('password', PasswordType::class, [
                 'attr' => [
-                        'placeholder' => 'Password'
+                        'placeholder' => 'Password',
                 ]
-            ])
-
-            ->add('image', FileType::class, [
-                'attr' => [
-                    'placeholder' => 'Upload An Image'
-                ]
-                
             ])
 
             ->add(
-                'submit',
-                SubmitType::class,
+                'submit',SubmitType::class,
                 [
-                    'attr' => ['class' => 'form-control btn-primary pull-right'],
+                    'attr' => ['class' => 'form-control btn-primary pull-right sign-up-btn'],
                     'label' => 'SIGN UP'
                 ]
             );
@@ -60,6 +52,8 @@
         {
         $resolver->setDefaults([
             'data_class' => UserProfile::class,
+            'csrf_protection' => false,
+            'validation_groups' => false,
         ]);
     }
 

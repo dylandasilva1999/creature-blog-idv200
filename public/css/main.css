@@ -83,6 +83,40 @@ button.ghost {
 	border-color: #FFFFFF;
 }
 
+.sign-up-btn {
+	border-radius: 20px;
+    border: 1px solid #CBAD4C;
+    margin: 2px;
+	background-color: #CBAD4C;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;	
+}
+
+.sign-up-btn:hover {
+	background-color: transparent;
+	color: #333;
+	border: solid 3px #CBAD4C;
+	transition: all 0.3s ease;
+}
+
+.sign-up-btn:active {
+	transform: scale(0.95);
+}
+
+.sign-up-btn:focus {
+	outline: none;
+}
+
+.sign-up-btn.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+}
+
 form {
 	background-color: #FFFFFF;
 	display: flex;
@@ -248,9 +282,10 @@ form p {
 }
 
 .register-btn {
+	width: 100%;
 	float: left;
-	margin-left: 55%;
-	margin-top: -45px;
+	margin-left: 0%;
+	margin-top: 25px;
 }
 
 .register-btn-right {

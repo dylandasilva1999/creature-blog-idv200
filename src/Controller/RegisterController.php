@@ -2,14 +2,14 @@
     // src/Controller/ProfileController.php
     namespace App\Controller;
 
+    use App\Entity\UserProfile;
+    use App\Form\UserProfileType;
+
     use Symfony\Component\HttpFoundation\Request;
     use Symfony\Component\HttpFoundation\Response;
     use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
     use Symfony\Component\Routing\Annotation\Route;
     use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
-
-    use App\Entity\UserProfile;
-    use App\Form\UserProfileType;
 
     class RegisterController extends AbstractController {
 
@@ -25,18 +25,20 @@
         */
         public function newProfile(Request $request) {
 
-            $user = new UserProfile();
-
-            $form = $this->createForm(UserProfileType::class, $user);
+            $form = $this->createForm(UserProfileType::class);
 
             $form->handleRequest($request);
 
             if ($form->isSubmitted() && $form->isValid()) {
 
-                $user->setPassword($this->passwordEncoder->encodePassword($user, $user->getPassword()));
+                $data = $form->getData();         
 
-                // $form->getData() holds the submitted values
-                $user = $form->getData();
+                $user = new UserProfile();
+
+                $user->setUsername($data->username);
+                $user->setEmail($data->email);
+                $user->setPassword($data->password);
+        
                 $entityManager = $this->getDoctrine()->getManager();
                 $entityManager->persist($user);
                 $entityManager->flush();

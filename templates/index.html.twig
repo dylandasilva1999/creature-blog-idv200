@@ -28,28 +28,7 @@
                                 </div>
                                 <span>OR</span>
 
-                                {# {{ form_widget(form.username) }}
-                                {{ form_errors(form.username) }} #}
-
-                                {{ form_row(form.username, {'attr': {'class': 'form-control'}}) }}
-                                {# <input type="text" name="username[username]" placeholder="Username" required/> #}
-
-                                {# {{ form_widget(form.email) }}
-                                {{ form_errors(form.email) }} #}
-
-                                {{ form_row(form.email, {'attr': {'class': 'form-control'}}) }}
-                                {# <input type="email" name="email[emai]"  placeholder="Email Address" required/> #}
-
-                                {# {{ form_widget(form.password) }}
-                                {{ form_errors(form.password) }} #}
-
-                                {{ form_row(form.password, {'attr': {'class':'form-control'}}) }}
-                                {# <input type="password" name="password[password]"  placeholder="Password" required/> #}
-
-                                {{ form_row(form.image, {'attr': {'class':'form-control'}}) }}
-                                {# <input type="file" id="myFile" name="filename[filename]"> #}
-
-                                {{ form_row(form.submit) }}
+                                {{ form(form) }}
 
                                 <p id="signIn">Already have an account? <b>Sign In here</b></p>
                             </form>

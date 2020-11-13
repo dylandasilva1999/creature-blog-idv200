@@ -299,3 +299,8 @@ form p {
 	margin-top: 70px;
 }
 
+.error {
+	position: absolute;
+	color: red;
+}
+

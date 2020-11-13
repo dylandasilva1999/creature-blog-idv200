@@ -846,6 +846,41 @@ button.post-create:hover, button.post-create:focus, button.post-create:active {
   letter-spacing: 0.170rem;
 }
 
+.create-post-btn {
+  width: 100%;
+	border-radius: 50px;
+	border: 2px solid white;
+  background: #5D6B34;
+  background-size: contain;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: bold;
+	padding-bottom: 20px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  transition: all 0.3s ease-in-out;
+  margin-top: 6%;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.create-post-btn {
+  transition: all 0.3s ease-in-out;
+  transition: all 0.5s cubic-bezier(0.65, -0.25, 0.25, 1.95);
+}
+
+.create-post-btn:hover, .create-post-btn:focus, .create-post-btn:active  {
+  transform: rotate(3deg);
+  letter-spacing: 0.170rem;
+  background: #404724;
+  transition: all 0.3s ease-in-out;
+}
+
+.create-post-btn:hover, .create-post-btn:focus, .create-post-btn:active {
+  letter-spacing: 0.170rem;
+}
+
 
 /*Extra Large Screen 27 Inch and above*/
 @media screen and (min-width: 2560px) {

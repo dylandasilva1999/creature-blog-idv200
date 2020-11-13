@@ -38,16 +38,20 @@
 
                         <div class="form-container sign-in-container">
 
-                            <form action="" method="POST">
+                            <form action="{{ path('home_view') }}" method="POST">
+
                                 <h1>Sign in</h1>
                                 <div class="social-container">
                                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                                 </div>
                                 <span>OR</span>
-                                <input type="text" value="" id="username-sign-in" placeholder="Username" name="_username" required/>
-                                <input type="password" placeholder="Password" name="_password" requried />
-                                <button class="register-btn" type="submit">LOG IN</button>
+                                <input type="text" value="" id="username-sign-in" placeholder="Username" name="username" required/>
+                                <input type="password" placeholder="Password" name="password" requried />
+                                <input type="hidden" name="_csrf_token"
+                                    value="{{ csrf_token('authenticate') }}"
+                                >
+                                <a href="{{ path('home_view') }}"><button class="register-btn" type="submit">LOG IN</button></a>
                                 
                             </form>
                         </div>

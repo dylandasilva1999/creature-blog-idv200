@@ -1,20 +1,77 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello SecurityController!{% endblock %}
+        {% block title %}CRE | Login{% endblock %}
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+        {% endblock %}
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+        {% block body %}
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/frost/Desktop/creature-blog-idv200/src/Controller/SecurityController.php'|file_link(0) }}">src/Controller/SecurityController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/frost/Desktop/creature-blog-idv200/templates/security/index.html.twig'|file_link(0) }}">templates/security/index.html.twig</a></code></li>
-    </ul>
-</div>
-{% endblock %}
+            {% block main %}
+
+                <div class="body container-fluid">
+                    <div class="container div" id="container">  
+                        <div class="form-container sign-up-container">
+                            {{ form_start(form) }}
+                            <form action="post" id="myForm">
+                                <h1>Create Account</h1>
+                                <div class="social-container">
+                                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                                </div>
+                                <span>OR</span>
+
+                                {{ form(form) }}
+
+                            </form>
+                            {{ form_end(form) }}
+                            
+                        </div>
+
+                        <div class="form-container sign-in-container">
+
+                            <form action="{{ path('home_view') }}" method="POST">
+
+                                <h1>Sign in</h1>
+                                <div class="social-container">
+                                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                                </div>
+                                <span>OR</span>
+                                <input type="text" value="{{ last_username }}" id="username-sign-in" placeholder="Username" name="username" required/>
+                                <input type="password" placeholder="Password" name="password" requried />
+                                <input type="hidden" name="_csrf_token"
+                                    value="{{ csrf_token('authenticate') }}"
+                                >
+                                <button class="register-btn" type="submit">LOG IN</button>
+                                
+                            </form>
+                        </div>
+
+                        <div class="overlay-container">
+                            <div class="overlay">
+                                <div class="overlay-panel overlay-left">
+                                    <h1>Become part of the pack, today.</h1>
+                                    <p>Become a wildlife enthusiast with us, join in on the fun blogs and exciting news about the wildlife</p>
+                                    <button class="register-btn" id="signIn">WANT TO SIGN IN?</button>
+                                </div>
+                                <div class="overlay-panel overlay-right">
+                                    <h1>Welcome back to the wild.</h1>
+                                    <p>Login and tell us about your journey in the wildlife!</p>
+                                    <button class="register-btn" id="signUp">WANT TO SIGN UP?</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {# {{ form_end(form) }} #}
+
+        {% endblock main %}
+
+    {% endblock body %}    
+
+    {% block javascripts %}
+        <script src="{{ asset('js/script.js') }}"></script>
+    {% endblock javascripts %}

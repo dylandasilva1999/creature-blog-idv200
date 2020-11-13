@@ -52,7 +52,6 @@
         {
         $resolver->setDefaults([
             'data_class' => UserProfile::class,
-            'csrf_protection' => false,
             'validation_groups' => false,
         ]);
     }

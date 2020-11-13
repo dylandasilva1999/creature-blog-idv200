@@ -97,7 +97,7 @@
                                 </div>
                                 <div class="modal-body">
                                 {{ form_start(form) }}
-                                <form action="{{ path('blogs_view') }}" method="POST">
+                                <form action="{{ path('blogs_view') }}" method="POST" enctype='multipart/form-data'>
                                     {{ form(form) }}
                                 </form>
                                 {{ form_end(form) }}

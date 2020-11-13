@@ -14,7 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class BlogPostController extends AbstractController{
 
     /**
-     * @Route("/", name="index")
+     * @Route("/blogs", name="blogs_view")
      */
     public function index(BlogPostRepository $blogPostRepository){
 
